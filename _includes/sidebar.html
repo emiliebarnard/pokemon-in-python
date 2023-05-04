@@ -8,13 +8,25 @@
       ul.link a:hover, a:focus {
         color: var(--clr-a-text-hvr);
       }
+      ul {
+    float: left;
+    margin-left: -10%;
+      }
+      .nobull {
+  list-style-type: none;
+ }
     </style>
     <ul>
       <!-- <li><a href="{{ platform.link }}"><i class="{{ platform.icon }}"></i> {{ platform.name }}</a></li> -->
        <li>header 1</li>
-        <ul>
-            <li>header 2</li>
-            <li><details><summary>header 2 with drop</summary>
+        <ul class="nobull">
+            <li><details><summary>header 2</summary>
+                <ul>
+                    <li>header 3</li>
+                    <li>header 3</li>
+                </ul>
+            </details></li>
+            <li><details><summary>header 2</summary>
                 <ul>
                     <li>header 3</li>
                     <li>header 3</li>
