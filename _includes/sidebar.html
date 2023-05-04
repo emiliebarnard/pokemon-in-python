@@ -10,9 +10,12 @@
       }
     </style>
     <ul class="link">
-      {%- for platform in site.sidebar %}
       <!-- <li><a href="{{ platform.link }}"><i class="{{ platform.icon }}"></i> {{ platform.name }}</a></li> -->
        <li>test</li>
+        <ul class="link">
+            <li>inner test</li>
+            <li>inner test</li>
+        </ul>
        <li>test2</li>
        <li>test3</li>
       {%- endfor %}
