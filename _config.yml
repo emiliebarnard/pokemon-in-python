@@ -27,7 +27,7 @@ baseurl: /
 # Build settings
 markdown: kramdown
 
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
 
 plugins:
   - jekyll-feed
