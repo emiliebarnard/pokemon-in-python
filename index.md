@@ -5,6 +5,31 @@
 layout: default
 title: title here
 ---
-# placeholder text header
+# header 1
+stuff
 
-text here
+# Core Python Interactions
+
+## Pokémon
+some intro here
+
+### Abilities
+explanation in english
+```python
+# code in python syntax
+print("hello, world")
+```
+### Characteristics
+### Egg Groups
+### Genders
+### Growth Rates
+### Natures
+### Pokéatholon Stats
+### Pokémon Location Areas
+### Pokémon Colors
+### Pokémon Forms
+### Pokémon Habitats
+### Pokémon Shapes
+### Pokémon Species
+### Stats
+### Types
