@@ -27,7 +27,7 @@ baseurl: /
 # Build settings
 markdown: kramdown
 
-remote_theme: jekyll-theme-minimal
+remote_theme: BDHU/minimalist
 
 plugins:
   - jekyll-feed
