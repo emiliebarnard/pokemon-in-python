@@ -47,6 +47,13 @@ This additional line of code displays the *flavor text* of the ability:
 ```python
 print(cute_charm_data["flavor_text_entries"][0]['flavor_text'])
 ```
+
+This additional line of code displays all Pokémon that can have this ability:
+```python
+for pokemon in cute_charm_data["pokemon"]:
+    print(pokemon["pokemon"]["name"])
+```
+
 ### Characteristics
 ### Egg Groups
 ### Genders
