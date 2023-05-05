@@ -19,7 +19,16 @@ An <i>ability<i> is a game mechanic that grants a passive effect for a Pokémon 
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Example
-The following Python code retreives JSON data for the ability named *Cute Charm*:
+The following Python code retreives JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys:
+- `effect_changes`
+- `effect_entries`
+- `flavor_text_entries`
+- `generation`
+- `id`
+- `is_main_series`
+- `name`
+- `names`
+- `pokemon`
 ```python
 # code in python syntax
 print("hello, world")
