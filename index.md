@@ -12,7 +12,7 @@ stuff
 some intro here
 
 ### Abilities
-An <i>ability<i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given them. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</>.
+An <i>ability<i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given them. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</a>.
 
 #### API Path
 `https://pokeapi.co/api/v2/ability/{id or name}/`
@@ -31,6 +31,7 @@ The following Python code retreives JSON data for the ability named *Cute Charm*
 - `names`: a list of names for this ability in different languages
 - `pokemon`: a list of Pokémon that may have this ability
 
+<br>
 
 ```python
 import requests, json
