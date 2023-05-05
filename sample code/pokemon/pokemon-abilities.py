@@ -10,6 +10,9 @@ cute_charm_data = requests.get(api_url).json()
 for key in cute_charm_data:
     print("key: ", key, "\n", "value:", cute_charm_data[key], "\n")
 
+## abc list of the keys in the dictionary for reference:
+keys = []
 for key in cute_charm_data:
-    print(key)
-# display 
+    keys.append(key)
+keys.sort()
+print(keys)
