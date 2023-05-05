@@ -31,6 +31,7 @@ The following Python code retreives JSON data for the ability named *Cute Charm*
 - `names`: a list of names for this ability in different languages
 - `pokemon`: a list of Pokémon that may have this ability
 
+
 ```python
 import requests, json
 
