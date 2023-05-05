@@ -1,18 +1,12 @@
-# display the original 151 pokemon
-# tutorial edited to Python from https://medium.com/@sergio13prez/fetching-them-all-poke-api-62ca580981a2
-
 import requests, json
 
+# fetch the api data and convert to dictionary:
 api_url = "https://pokeapi.co/api/v2/ability/cute-charm/"
 cute_charm_data = requests.get(api_url).json()
 
-# display all key-value pairs from the JSON data:
+""" # display all key-value pairs from the JSON data:
 for key in cute_charm_data:
-    print("key: ", key, "\n", "value:", cute_charm_data[key], "\n")
+    print("key: ", key, "\n", "value:", cute_charm_data[key], "\n") """
 
-## abc list of the keys in the dictionary for reference:
-keys = []
-for key in cute_charm_data:
-    keys.append(key)
-keys.sort()
-print(keys)
+# display the flavor text in english:
+print(cute_charm_data["flavor_text_entries"][0]['flavor_text'])
