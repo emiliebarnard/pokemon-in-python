@@ -107,7 +107,7 @@ Neat trick - there is GitHub markdown that says "hey, this is code. But also, it
 
 ### Adding Code File to the Repository
 
-To be consistent, once you get some working code for your section we should probably add the actual Python file to the repository so it's easy for the rest of us to run it if we want. For that, you'll want to make sure you're on the *main* branch, not *gh-pages*. 
+To be consistent, once you get some working code for your section we should probably add the actual Python file to the repository so it's easy for the rest of us to run it if we want. For that, you'll want to make sure you're on the *main* branch, not *gh-pages*. Then, click on the *sample code* folder. I figured we could organize in here but another level of folders based on the headings.
 
 ## Yikes this was a lot of text
 
