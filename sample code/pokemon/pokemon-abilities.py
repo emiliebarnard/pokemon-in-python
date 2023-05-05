@@ -10,3 +10,7 @@ for key in cute_charm_data:
 
 # display the flavor text in english:
 print(cute_charm_data["flavor_text_entries"][0]['flavor_text'])
+
+# display all pokemon that can have this ability:
+for pokemon in cute_charm_data["pokemon"]:
+    print(pokemon["pokemon"]["name"])
