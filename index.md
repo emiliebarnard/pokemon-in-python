@@ -20,15 +20,15 @@ where `id` is an integer (`1` as the lowest option) and `name` is a lower-case s
 
 #### Example
 The following Python code retreives JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys:
-- `effect_changes`
-- `effect_entries`
-- `flavor_text_entries`
-- `generation`
-- `id`
-- `is_main_series`
-- `name`
-- `names`
-- `pokemon`
+- `effect_changes`: a list of historical effects this ability in previous versions and in different languages
+- `effect_entries`: a list of the current effect this this ability in different languages
+- `flavor_text_entries`: a list of the flavor text, or short text often displayed in images, of this ability in different languages
+- `generation`: the Pokémon generation in which this ability first appeared
+- `id`: an integer (`1` as the lowest option) unique to this ability
+- `is_main_series`: a boolean to flag whether or not this ability first appeared in the main series of the games
+- `name`: a string representing this ability's name
+- `names`: a list of names for this ability in different languages
+- `pokemon`: a list of Pokémon that may have this ability
 ```python
 # code in python syntax
 print("hello, world")
