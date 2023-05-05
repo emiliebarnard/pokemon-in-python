@@ -16,9 +16,10 @@ An <i>ability<i> is a game mechanic that grants a passive effect for a Pokémon 
 
 #### API Path
 `https://pokeapi.co/api/v2/ability/{id or name}/`
+
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-#### Example
+#### Examples
 The following Python code retreives JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys:
 - `effect_changes`: a list of historical effects this ability in previous versions and in different languages
 - `effect_entries`: a list of the current effect this this ability in different languages
