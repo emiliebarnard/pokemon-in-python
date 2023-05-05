@@ -3,10 +3,13 @@
 
 import requests, json
 
-api_url = "https://pokeapi.co/api/v2/ability/1/"
-response = requests.get(api_url)
-pokemon_json = response.json() # the first 151 pokemon in json (dictionary of count, next, previous, results)
+api_url = "https://pokeapi.co/api/v2/ability/cute-charm/"
+cute_charm_data = requests.get(api_url).json()
 
-for key in pokemon_json:
-    print(key, pokemon_json[key])
-    
+# display all key-value pairs from the JSON data:
+for key in cute_charm_data:
+    print("key: ", key, "\n", "value:", cute_charm_data[key], "\n")
+
+for key in cute_charm_data:
+    print(key)
+# display 
