@@ -29,9 +29,21 @@ The following Python code retreives JSON data for the ability named *Cute Charm*
 - `name`: a string representing this ability's name
 - `names`: a list of names for this ability in different languages
 - `pokemon`: a list of Pokémon that may have this ability
+
 ```python
-# code in python syntax
-print("hello, world")
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/ability/cute-charm/"
+cute_charm_data = requests.get(api_url).json()
+
+for key in cute_charm_data:
+    print("key: ", key, "\n", "value:", cute_charm_data[key], "\n")
+```
+
+This additional line of code displays the *flavor text* of the ability:
+```python
+print(cute_charm_data["flavor_text_entries"][0]['flavor_text'])
 ```
 ### Characteristics
 ### Egg Groups
