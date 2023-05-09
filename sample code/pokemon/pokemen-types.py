@@ -13,10 +13,10 @@ for key in ghost_data:
 # display damage relations for this type:
 print(ghost_data["damage_relations"])"""
 
-# display 'double_damage_from' in damage relations:
+# display a list of types that are very effective against this type:
 for double_damage_from in ghost_data["damage_relations"]["double_damage_from"]:
     print(double_damage_from["name"])
 
-# display 'double_damage_to' in damage relations:
+# display a list of types this type is very effect against:
 for double_damage_to in ghost_data["damage_relations"]["double_damage_to"]:
     print(double_damage_to["name"])
