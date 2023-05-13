@@ -3,8 +3,28 @@
 layout: default
 title: API Docs
 ---
-# header 1
-stuff
+# Getting Started
+**Objective**
+The purpose of this section is to provide details on recommended software to download and how to set up before beginning to code with Python.
+
+**Disclaimer:** The instructions provided within this section will work for both Microsoft Windows and Mac users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
+
+**Visual Studio Code Requirements**
+* **Hardware:** 1.6GHZ or faster processor (recommended)
+* **System OS:** Microsoft Windows 10 and 11 (32-bit and 64-bit), macOS X (High Sierra 10.13+)
+* System requirements documentation: https://code.visualstudio.com/docs/supporting/requirements
+
+**Python**
+* **Hardware:** 8GB RAM or higher (recommended)
+* **Software:** Latest Python version 3.11.3 release - Microsoft Windows 10 or 11 and macOS 13 or higher
+* Python version releases for Microsoft Windows: https://www.python.org/downloads/windows/
+* Python version releases for macOS: https://www.python.org/downloads/macos/
+* Python documentation (first time use) for Microsoft Windows: https://docs.python.org/3/using/windows.html
+* Python documentation (first time use) for macOS: https://docs.python.org/3/using/mac.html
+
+## Visual Studio Code (Setup)
+1. Download [Visual Studio Code](https://code.visualstudio.com/)
+
 
 # Core Python Interactions
 
