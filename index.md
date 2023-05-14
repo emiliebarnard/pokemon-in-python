@@ -125,5 +125,156 @@ for pokemon in cute_charm_data["pokemon"]:
 ### Pokémon Habitats
 ### Pokémon Shapes
 ### Pokémon Species
+    A *Pokémon Species* forms the basis for at least one Pokémon. Attributes of a *Pokémon species* are shared across all varieties of Pokémon within the species. 
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon-species/{id or name}/`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+
+#### Examples
+The following Python code retreives JSON data for the species named *Butterfree* and stores it into a dictionary with the following keys:
+
+- `base_happiness`: the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon
+- `capture_rate`: the base capture rate; up to 255. The higher the number, the easier the catch
+- `color`:the color of this Pokémon for Pokédex search
+- `egg_groups`: a list of egg groups this Pokémon species is a member of
+- `evolution_chain`: the evolution chain this Pokémon species is a member of
+- `evolves_from_species`: the Pokémon species that evolves into this Pokemon_species
+- `flavor_text_entries`: a list of flavor text entries for this Pokémon species
+- `form_descriptions`: descriptions of different forms Pokémon take on within the Pokémon species
+- `forms_switchable`: whether or not this Pokémon has multiple forms and can switch between them
+- `gender_rate`: the chance of this Pokémon being female, in eighths; or -1 for genderless
+- `genera`: the genus of this Pokémon species listed in multiple languages
+- `generation`: the generation this Pokémon species was introduced in
+- `growth_rate`: the rate at which this Pokémon species gains levels
+- `habitat`: the habitat this Pokémon species can be encountered in
+- `has_gender_differences`: whether or not this Pokémon has visual gender differences
+- `hatch_counter`: initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's
+- `id`: the identifier for this resource
+- `is_baby`: whether or not this is a baby Pokémon
+- `is_legendary`: whether or not this is a legendary Pokémon
+- `is_mythical`: whether or not this is a mythical Pokémon
+- `name`: the name for this resource
+- `names`: the name of this resource listed in different languages
+- `order`: the order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage
+- `pal_park_encounters`: a list of encounters that can be had with this Pokémon species in pal park
+- `pokedex_numbers`: a list of Pokedexes and the indexes reserved within them for this Pokémon species
+- `shape`: the shape of this Pokémon for Pokédex search
+- `varieties`: a list of the Pokémon that exist within this Pokémon species
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-species/butterfree"
+butterfree_data = requests.get(api_url).json()
+
+for key in butterfree_data:
+    print("key: ", key, "\n", "value:", butterfree_data[key], "\n")
+```
+
+This additional line of code displays the flavor text of this species in English:
+
+```python
+for entry in butterfree_data["flavor_text_entries"]:
+    if entry["language"]["name"] == "en":
+        flavor_text = entry["flavor_text"]
+        print(flavor_text)
+```
+
+This additional line of code displays this species' genus in Chinese:
+
+```python
+for genus in butterfree_data["genera"]:
+    if genus["language"]["name"] == "zh-Hant":
+        print(genus["genus"])
+```
 ### Stats
+    *Stats* determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
+
+#### API Path
+`https://pokeapi.co/api/v2/stat/{id or name}/`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+
+#### Examples
+The following Python code retreives JSON data for the stat named *attack* and stores it into a dictionary with the following keys:
+- `affecting_moves`: a detail of moves which affect this stat positively or negatively
+- `affecting_natures`: a detail of natures which affect this stat positively or negatively
+- `characteristics`: a list of characteristics that are set on a Pokémon when its highest base stat is this stat
+- `game_index`: id the games use for this stat
+- `id`: the identifier for this resource
+- `is_battle_only`: whether this stat only exists within a battle
+- `move_damage_class`: the class of damage this stat is directly related to
+- `name`: the name for this resource
+- `names`: the name of this resource listed in different languages
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/stat/attack"
+attack_data = requests.get(api_url).json()
+
+for key in attack_data:
+    print("key: ", key, "\n", "value:", attack_data[key], "\n")
+```
+
+This additional line of code displays moves which decrease the referenced stat:
+```python
+for decrease in attack_data["affecting_moves"]["decrease"]:
+    print(decrease["move"]["name"]))
+```
+
+This additional line of code displays natures which increase the referenced stat:
+```python
+for increase in attack_data["affecting_natures"]["increase"]:
+    print(increase["name"])
+```
 ### Types
+    *Types* are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
+
+#### API Path
+`https://pokeapi.co/api/v2/type/{id or name}/`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+
+#### Examples
+The following Python code retreives JSON data for the type named *ghost* and stores it into a dictionary with the following keys:
+- `damage_relations`: a detail of how effective this type is toward others and vice versa
+- `game_indices`: a list of game indices relevent to this item by generation
+- `generation`: the generation this type was introduced in.
+- `id`: the identifier for this resource
+- `move_damage_class`: the class of damage inflicted by this type
+- `moves`: a list of moves that have this type
+- `name`: the name for this resource
+- `names`: the name of this resource listed in different languages
+- `past_damage_relations`: a list of details of how effective this type was toward others and vice versa in previous generations
+- `pokemon`: a list of details of Pokémon that have this type
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/type/ghost"
+ghost_data = requests.get(api_url).json()
+
+for key in ghost_data:
+    print("key: ", key, "\n", "value:", ghost_data[key], "\n")
+```
+
+This additional line of code displays a list of types that are very effective against this type:
+```python
+for double_damage_from in ghost_data["damage_relations"]["double_damage_from"]:
+    print(double_damage_from["name"])
+```
+
+This additional line of code displays a list of types this type is very effect against:
+```python
+for double_damage_to in ghost_data["damage_relations"]["double_damage_to"]:
+    print(double_damage_to["name"])
+```
