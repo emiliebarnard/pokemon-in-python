@@ -3,6 +3,76 @@
 layout: default
 title: API Docs
 ---
+# Introduction
+This documentation provides Python developers with references and tutorials to utilize [PokéAPI](https://pokeapi.co/).
+
+## What is PokéAPI?
+[PokéAPI](https://pokeapi.co/) is a modern RESTful Application Programming Interface (API) for developers to quickly consume the Pokémon data required for their projects. The data includes Pokémon moves, abilities, types, egg groups, and more.
+
+## What are Python dictionaries?
+The API URL line retrieves the relevant data in a JSON file and then in Python we convert the JSON file into a <i>dictionary</i>.
+<i>Dictionaries</i> are Python’s implementation of a data structure. 
+<br>
+A <i>dictionary</i> consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value. <i>Key</i> is a unique identifier, and <i>value</i> is where all the data is for the key. 
+<br>
+You can define a <i>dictionary</i> by enclosing a comma-separated list of key-value pairs in curly braces ({}). A colon (:) separates each key from its associated value. For example:
+```python
+d = {
+    <key>: <value>,
+    <key>: <value>,
+      .
+      .
+      .
+    <key>: <value>
+}
+```
+## Overview of the Documentation
+The documentation is organized as follows:
+* Introduction
+* Getting Started
+* Core Python Interactions
+    * Encounters
+      * Encounter Methods
+      * Encounter Conditions
+      * Encounter Condition Values
+    * Evolution
+      * Evolution Chains
+      * Evolution Triggers
+    * Moves
+      * Move Ailments
+      * Move Battle Styles
+      * Move Categories
+      * Move Damage Classes
+      * Move Learn Methods
+      * Move Targets
+    * Pokémon
+      * Abilities
+      * Characteristics
+      * Egg Groups
+      * Genders
+      * Growth Rates
+      * Natures
+      * Pokéatholon Stats
+      * Pokémon Location Areas
+      * Pokémon Colors
+      * Pokémon Forms
+      * Pokémon Habitats
+      * Pokémon Shapes
+      * Pokémon Species
+      * Stats
+      * Types
+* More Python Sample Code
+    * Create Pokédex
+    * Search Pokémon by Filters
+    * Display Pokémon Image
+* Resources
+
+## More about this documentation
+This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.
+<br>
+The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon-in-python) and was last updated in May 2023. 
+
+
 # Getting Started
 **Objective**
 The purpose of this section is to provide details on recommended software to download and how to set up before beginning to code with Python.
@@ -70,7 +140,7 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 some intro here
 
 ### Abilities
-An <i>ability<i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given time. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</a>.
+An <i>ability</i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given time. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</a>.
 
 #### API Path
 `https://pokeapi.co/api/v2/ability/{id or name}/`
@@ -126,7 +196,7 @@ for pokemon in cute_charm_data["pokemon"]:
 ### Pokémon Shapes
     
 ### Pokémon Species
-A <i>Pokémon Species<i> forms the basis for at least one Pokémon. Attributes of a *Pokémon species* are shared across all varieties of Pokémon within the species. 
+A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-species/{id or name}/`
@@ -134,7 +204,7 @@ A <i>Pokémon Species<i> forms the basis for at least one Pokémon. Attributes o
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
-The following Python code retreives JSON data for the species named *Butterfree* and stores it into a dictionary with the following keys:
+The following Python code retreives JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:
 
 - `base_happiness`: the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon
 - `capture_rate`: the base capture rate; up to 255. The higher the number, the easier the catch
@@ -194,7 +264,7 @@ for genus in butterfree_data["genera"]:
 ```
 
 ### Stats
-<i>Stats<i> determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
+<i>Stats</i> determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
 
 #### API Path
 `https://pokeapi.co/api/v2/stat/{id or name}/`
@@ -202,7 +272,7 @@ for genus in butterfree_data["genera"]:
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
-The following Python code retreives JSON data for the stat named *attack* and stores it into a dictionary with the following keys:
+The following Python code retreives JSON data for the stat named <i>attack</i> and stores it into a dictionary with the following keys:
 - `affecting_moves`: a detail of moves which affect this stat positively or negatively
 - `affecting_natures`: a detail of natures which affect this stat positively or negatively
 - `characteristics`: a list of characteristics that are set on a Pokémon when its highest base stat is this stat
@@ -238,7 +308,7 @@ for increase in attack_data["affecting_natures"]["increase"]:
 ```
 
 ### Types
-<i>Types<i> are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
+<i>Types</i> are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
 
 #### API Path
 `https://pokeapi.co/api/v2/type/{id or name}/`
@@ -246,7 +316,7 @@ for increase in attack_data["affecting_natures"]["increase"]:
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
-The following Python code retreives JSON data for the type named *ghost* and stores it into a dictionary with the following keys:
+The following Python code retreives JSON data for the type named <i>ghost</i> and stores it into a dictionary with the following keys:
 - `damage_relations`: a detail of how effective this type is toward others and vice versa
 - `game_indices`: a list of game indices relevent to this item by generation
 - `generation`: the generation this type was introduced in.
