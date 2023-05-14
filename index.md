@@ -124,8 +124,9 @@ for pokemon in cute_charm_data["pokemon"]:
 ### Pokémon Forms
 ### Pokémon Habitats
 ### Pokémon Shapes
+    
 ### Pokémon Species
-    A *Pokémon Species* forms the basis for at least one Pokémon. Attributes of a *Pokémon species* are shared across all varieties of Pokémon within the species. 
+A <i>Pokémon Species<i> forms the basis for at least one Pokémon. Attributes of a *Pokémon species* are shared across all varieties of Pokémon within the species. 
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-species/{id or name}/`
@@ -191,8 +192,9 @@ for genus in butterfree_data["genera"]:
     if genus["language"]["name"] == "zh-Hant":
         print(genus["genus"])
 ```
+
 ### Stats
-    *Stats* determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
+<i>Stats<i> determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
 
 #### API Path
 `https://pokeapi.co/api/v2/stat/{id or name}/`
@@ -234,8 +236,9 @@ This additional line of code displays natures which increase the referenced stat
 for increase in attack_data["affecting_natures"]["increase"]:
     print(increase["name"])
 ```
+
 ### Types
-    *Types* are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
+<i>Types<i> are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
 
 #### API Path
 `https://pokeapi.co/api/v2/type/{id or name}/`
