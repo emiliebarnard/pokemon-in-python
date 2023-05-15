@@ -10,3 +10,5 @@ highly_curious_data = requests.get(api_url).json()
 
 for key in highly_curious_data:
      print(key)
+
+print(type(highly_curious_data["descriptions"][0]))
