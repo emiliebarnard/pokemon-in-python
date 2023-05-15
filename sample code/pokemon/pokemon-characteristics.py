@@ -8,7 +8,9 @@ highly_curious_data = requests.get(api_url).json()
 # for key in highly_curious_data:
 #     print("key: ", key, "\n", "value:", highly_curious_data[key], "\n")
 
-for key in highly_curious_data:
-     print(key)
+# for key in highly_curious_data:
+#      print(key)
 
-print(type(highly_curious_data["descriptions"][0]))
+print("English:", highly_curious_data["descriptions"][7]["description"])
+print("Spanish:", highly_curious_data["descriptions"][5]["description"])
+print("French:", highly_curious_data["descriptions"][3]["description"])
