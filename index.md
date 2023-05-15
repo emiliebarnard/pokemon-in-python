@@ -197,12 +197,31 @@ The *charactertic* of a Pokémon is determined by which stat holds the highest I
 Further, each stat has 5 options for the *characteristic* phrase applied. The modulo 5 of the IV determines which of the 5 to use.
 
 #### API Path
-`https://pokeapi.co/api/v2/characteristic/{id}/`
+`https://pokeapi.co/api/v2/characteristic/{id}`
 
 where `id` is an integer (`1` as the lowest option)`   
 
 #### Examples
+The following Python code retreives JSON data for the characteristic *Highly curious* and stores it into a dictionary with the following keys:
+- `descriptions`: a list of 
+- `gene_modulo`:
+- `highest_stat`:
+- `id`: 
+- `possible_values`: 
 
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/characteristic/4"
+highly_curious_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in highly_curious_data:
+    print("key: ", key, "\n", "value:", highly_curious_data[key], "\n")
+```
 
 ### Egg Groups
 ### Genders
@@ -219,7 +238,7 @@ where `id` is an integer (`1` as the lowest option)`
 A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
 
 #### API Path
-`https://pokeapi.co/api/v2/pokemon-species/{id or name}/`
+`https://pokeapi.co/api/v2/pokemon-species/{id or name}`
 
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
