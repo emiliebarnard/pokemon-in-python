@@ -95,6 +95,7 @@ The purpose of this section is to provide details on recommended software to dow
 ## Visual Studio Code & Python Software (Setup)
 1. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Visual%20Studio%20Code%20Image.png)
+<img src="https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Visual Studio Code Image.png" alt="Visual Studio Code download screen image">
 
 ![Visual Studio Code choose operating system image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Visual%20Studio%20Code%20Image%202.png)
 
