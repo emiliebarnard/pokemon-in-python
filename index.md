@@ -177,7 +177,7 @@ This additional line of code displays the *flavor text* of the ability:
 print(cute_charm_data["flavor_text_entries"][0]['flavor_text'])
 ```
 
-This additional line of code displays all Pokémon that can have this ability:
+This additional snippet of code displays all Pokémon that can have this ability:
 ```python
 for pokemon in cute_charm_data["pokemon"]:
     print(pokemon["pokemon"]["name"])
@@ -222,6 +222,26 @@ highly_curious_data = requests.get(api_url).json()
 for key in highly_curious_data:
     print("key: ", key, "\n", "value:", highly_curious_data[key], "\n")
 ```
+
+This additional snippet of code displays the *description* of the characteristic in English, Spanich, and French:
+```python
+print("English:", highly_curious_data["descriptions"][7]["description"])
+print("Spanish:", highly_curious_data["descriptions"][5]["description"])
+print("French:", highly_curious_data["descriptions"][3]["description"])
+```
+
+This code displays the *description* of the characteristic given a specific stat (see [stats](#stats) for more information):
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/stat/attack"
+attack_data = requests.get(api_url).json()
+
+
+```
+
 
 ### Egg Groups
 ### Genders
