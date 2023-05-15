@@ -184,6 +184,26 @@ for pokemon in cute_charm_data["pokemon"]:
 ```
 
 ### Characteristics
+
+The *charactertic* of a Pokémon is determined by which stat holds the highest IV (individual values), or strength, and the remainder of that IV when divided by 5 (modulo 5). The highest stat will be one of the following six options:
+
+- HP (hit points), the total amount of attacks needed to be defeated)
+- Attack, which partly determines how much damage the Pokémon deals when applying a physical move
+- Defense, which partly determines how much damage the Pokémon takes when hit by a physical move
+- Special Attack, which partly determines how much damage the Pokémon deals when applying a special move
+- Special Defense, which partly determines how much damage the Pokémon takes when hit by a special move
+- Speed, which determines the order of Pokémon in battle
+
+Further, each stat has 5 options for the *characteristic* phrase applied. The modulo 5 of the IV determines which of the 5 to use.
+
+#### API Path
+`https://pokeapi.co/api/v2/characteristic/{id}/`
+
+where `id` is an integer (`1` as the lowest option)`   
+
+#### Examples
+
+
 ### Egg Groups
 ### Genders
 ### Growth Rates
