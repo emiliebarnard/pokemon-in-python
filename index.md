@@ -230,18 +230,18 @@ print("Spanish:", highly_curious_data["descriptions"][5]["description"])
 print("French:", highly_curious_data["descriptions"][3]["description"])
 ```
 
-This code displays the *description* of the characteristic given a specific stat (see [stats](#stats) for more information):
+This code displays the 5 possible characteristics given a highest attack stat (see [stats](#stats) for more information):
 
 ```python
 import requests, json
 
-# fetch the api data and convert to dictionary:
 api_url = "https://pokeapi.co/api/v2/stat/attack"
 attack_data = requests.get(api_url).json()
 
-
+for characteristic in attack_data["characteristics"]:
+    characteristic_data = requests.get(characteristic['url']).json()
+    print(characteristic_data["descriptions"][7]["description"])
 ```
-
 
 ### Egg Groups
 ### Genders
