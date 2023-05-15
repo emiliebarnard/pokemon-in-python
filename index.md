@@ -203,7 +203,7 @@ where `id` is an integer (`1` as the lowest option)`
 
 #### Examples
 The following Python code retreives JSON data for the characteristic *Highly curious* and stores it into a dictionary with the following keys:
-- `descriptions`: a list of 
+- `descriptions`: a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. 
 - `gene_modulo`:
 - `highest_stat`:
 - `id`: 
