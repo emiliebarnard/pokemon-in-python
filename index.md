@@ -96,30 +96,30 @@ The purpose of this section is to provide details on recommended software to dow
 1. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Visual%20Studio%20Code%20Image.png)
 
-![Visual Studio Code choose operating system image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Visual%20Studio%20Code%20Image%202.png)
+![Visual Studio Code choose operating system image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Visual%20Studio%20Code%20Image%202.png)
 
 2. Download [Python](https://www.python.org/downloads/). **Note:** Some Windows users may need to download Python directly from the Microsoft Store instead. This can be done [here](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K?hl=en-us&gl=us).
-![Python download screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20Image.png)
+![Python download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image.png)
 
 3. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code.
-![Python install screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20Image%202.png)
+![Python install screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%202.png)
 
 **Note:** The [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) link opens Visual Studio code application. From there, select **Install**. When finished, a page will appear in the app titled, *"Get Started with Python Development."*
 
-![Python install screen in Microsoft Windows store image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20Image%203.png)
+![Python install screen in Microsoft Windows store image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%203.png)
 
-![Python Get Started with Python Development screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20Image%204.png)
+![Python Get Started with Python Development screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%204.png)
 
 4. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window appears at the bottom of the screen.
 
-![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20Image%205%20Terminal.png)
+![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%205%20Terminal.png)
 
-![Python Terminal window below screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%20image%206%20Terminal%20below%20screen.png)
+![Python Terminal window below screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20image%206%20Terminal%20below%20screen.png)
 
 5. In the terminal window, type **pip install requests** and press **enter**. A wall of text will appear; the words **"successfully installed"** will display.
 **Note:** If an error appears, then type **pip3 install requests** instead for the **"succesfully installed"** message to display.
 
-![Python success message in termail screen image](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/Python%207%20Success%20Message.png)
+![Python success message in termail screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%207%20Success%20Message.png)
 
 ### PokéAPI (How to use)
 **Disclaimer:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
@@ -130,7 +130,7 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 2. Click the **Submit** button.
 3. Review the resource attributes below of the API’s result displaying Pikachu’s traits.
 
-![Pikachu API attribute display screen image example](https://github.com/emiliebarnard/pokemon-in-python/blob/gh-pages/PokeAPI%20Image%20Pikachu%20Example.png)
+![Pikachu API attribute display screen image example](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/PokeAPI%20Image%20Pikachu%20Example.png)
 
 **Note:** Next steps involve coding with Python to generate an API request for Pokémon.
 
