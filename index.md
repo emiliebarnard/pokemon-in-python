@@ -272,19 +272,19 @@ api_url = "https://pokeapi.co/api/v2/pokemon/1/encounters"
 rhydon_locations = requests.get(api_url).json()
 
 for location in rhydon_locations:
-    for key, value in location.items():
-        print(key, ":", value)
-    print()
+    for key, value in location.items():
+        print(key, ":", value)
+    print()
 ```
 
 This additional code displays only the `name` of the location(s) in which players can encounter the specified Pokémon:
 ```python
 for location in rhydon_locations:
-    location_area = location["location_area"]
-    if location_area:
-        name = location_area["name"]
-        if name:
-            print("Rhydon Encounter Location:", name)
+    location_area = location["location_area"]
+    if location_area:
+        name = location_area["name"]
+        if name:
+            print("Rhydon Encounter Location:", name)
 ```
 
 ### Pokémon Colors
