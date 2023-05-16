@@ -16,9 +16,7 @@
 title: Pokémon in Python
 email: add names here
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This documentation provides Python developers with references and tutorials to utilize <a href="https://pokeapi.co/">PokéAPI</a>, a Pokémon API.
 url: "https://emiliebarnard.github.io/pokemon-in-python/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # twitter_username: jekyllrb
