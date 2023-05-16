@@ -258,6 +258,19 @@ The following Python code retreives JSON data for the Egg Group *Dragon* and sto
 - `names`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, name and url. These keys refer to the name and url of the language used to express the Egg Group name.
 - `pokemon_species`: a list of dictionaries with two keys, name and url. These reference all the Pokémon in the Egg Group.
 
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/egg-group/dragon/"
+dragon_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in dragon_data:
+    print("key: ", key, "\n", "value:", dragon_data[key], "\n")
+```
+
+This additional code 
 
 ### Genders
 ### Growth Rates
