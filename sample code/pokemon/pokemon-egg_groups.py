@@ -7,3 +7,6 @@ dragon_data = requests.get(api_url).json()
 # display all key-value pairs from the JSON data:
 for key in dragon_data:
     print("key: ", key, "\n", "value:", dragon_data[key], "\n")
+
+for pokemon in dragon_data["pokemon_species"]:
+    print(pokemon["name"])
