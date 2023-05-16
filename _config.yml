@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Pokémon in Python
-email: <a href="https://github.com/emiliebarnard">Emilie Barnard</a>, <a href="https://github.com/ChristaMitchell">Christa Mitchell</a>, <a href="https://github.com/ChaniSE">Chani Enochs</a>, <a href="https://github.com/shmeethekid">Shayla Cabalan</a>, <a href="https://github.com/yvonneben">Yvonne Ben</a>, <a href="https://github.com/SoulScrib">Jared Prewitt</a>
+email: Written by <a href="https://github.com/emiliebarnard">Emilie Barnard</a>, <a href="https://github.com/yvonneben">Yvonne Ben</a>, <a href="https://github.com/shmeethekid">Shayla Cabalan</a>, <a href="https://github.com/ChaniSE">Chani Enochs</a>, <a href="https://github.com/ChristaMitchell">Christa Mitchell</a>, and <a href="https://github.com/SoulScrib">Jared Prewitt</a>
 description: >- # this means to ignore newlines until "baseurl:"
   This documentation provides Python developers with references and tutorials to utilize <a href="https://pokeapi.co/">PokéAPI</a>, a Pokémon API.
 url: "https://emiliebarnard.github.io/pokemon-in-python/" # the base hostname & protocol for your site, e.g. http://example.com
