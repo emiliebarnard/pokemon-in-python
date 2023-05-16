@@ -199,12 +199,12 @@ Further, each stat has 5 options for the *characteristic* phrase applied. The mo
 #### API Path
 `https://pokeapi.co/api/v2/characteristic/{id}`
 
-where `id` is an integer (`1` as the lowest option)`   
+where `id` is an integer (`1` as the lowest option)
 
 #### Examples
 The following Python code retreives JSON data for the characteristic *Highly curious* and stores it into a dictionary with the following keys:
 - `descriptions`: a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. 
-- `gene_modulo`: a inteeger between 0 and 4 (inclusive) which is the remainder of the highest IV divided by 5 (modulo 5)
+- `gene_modulo`: an inteeger between 0 and 4 (inclusive) which is the remainder of the highest IV divided by 5 (modulo 5)
 - `highest_stat`: a dictionary with two keys, name and url, both of which are string values that refer to the IV associated with this characteristic
 - `id`: an integer (`1` as the lowest option) unique to this characteristic
 - `possible_values`: a list of integers that represent the possible values of the highest IV of a Pokémon with this characteristic
@@ -244,6 +244,19 @@ for characteristic in attack_data["characteristics"]:
 ```
 
 ### Egg Groups
+A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are compatible for breeding.
+
+#### API Path
+`https://pokeapi.co/api/v2/egg-group/{id or name}`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of *Egg Group*
+
+#### Examples
+The following Python code retreives JSON data for the Egg Group *Dragon* and stores it into a dictionary with the following keys:
+- `names`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, name and url. These keys refer to the name and url of the language used to express the Egg Group name.
+- `pokemon_species`: a list of dictionaries with two keys, name and url. These reference all the Pokémon in the Egg Group.
+
+
 ### Genders
 ### Growth Rates
 ### Natures
