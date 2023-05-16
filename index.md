@@ -270,7 +270,11 @@ for key in dragon_data:
     print("key: ", key, "\n", "value:", dragon_data[key], "\n")
 ```
 
-This additional code 
+This additional code displays all Pokémon that belong to the Egg Group *Dragon*:
+```python
+for pokemon in dragon_data["pokemon_species"]:
+    print(pokemon["name"])
+```
 
 ### Genders
 ### Growth Rates
