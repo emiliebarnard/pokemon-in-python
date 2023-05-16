@@ -3,17 +3,27 @@
 layout: default
 title: API Docs
 ---
+## About this documentation
+This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.
+<br>
+The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon-in-python) and was last updated in May 2023. 
+<br>
+
 # Introduction
 This documentation provides Python developers with references and tutorials to utilize [PokéAPI](https://pokeapi.co/).
+<br>
+If you are reading this documentation, we assume you know what Pokémon is, have at least a basic understanding of Python, and know how RESTful API works.
+
 
 ## What is PokéAPI?
-[PokéAPI](https://pokeapi.co/) is a modern RESTful Application Programming Interface (API) for developers to quickly consume the Pokémon data required for their projects. The data includes Pokémon moves, abilities, types, egg groups, and more.
+[PokéAPI](https://pokeapi.co/) is a modern [RESTful Application Programming Interface (API)](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) for developers to quickly consume the Pokémon data required for their projects. The data includes Pokémon moves, abilities, types, egg groups, and more.
 
 ## What are Python dictionaries?
-The API URL line retrieves the relevant data in a JSON file and then in Python we convert the JSON file into a <i>dictionary</i>.
-<i>Dictionaries</i> are Python’s implementation of a data structure. 
+<i>Dictionaries</i> are Python’s implementation of a data structure. The API URL line retrieves the relevant data in a JSON file and then in Python we convert the JSON file into a <i>dictionary</i>.
 <br>
-A <i>dictionary</i> consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value. <i>Key</i> is a unique identifier, and <i>value</i> is where all the data is for the key. 
+A <i>dictionary</i> consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value.
+<br>
+<i>Key</i> is a unique identifier, and <i>value</i> is where all the data is for the key. 
 <br>
 You can define a <i>dictionary</i> by enclosing a comma-separated list of key-value pairs in curly braces ({}). A colon (:) separates each key from its associated value. For example:
 ```python
@@ -67,10 +77,7 @@ The documentation is organized as follows:
     * Display Pokémon Image
 * Resources
 
-## More about this documentation
-This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.
-<br>
-The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon-in-python) and was last updated in May 2023. 
+
 
 
 # Getting Started
