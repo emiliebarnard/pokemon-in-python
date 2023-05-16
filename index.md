@@ -249,6 +249,44 @@ for characteristic in attack_data["characteristics"]:
 ### Natures
 ### Pokéatholon Stats
 ### Pokémon Location Areas
+Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon/{id or name}/encounters`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`
+
+#### Examples
+
+The following Python code retrieves JSON data for the location areas of the Pokémon Rhydon (this Pokémon's id is 1) and stores it into a dictionary with the following keys:
+- `location_area`: the name of the location and the API url for that location
+- `version_details`: a list of encounters, chances, and versions related to the specified Pokémon
+<br>
+
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon/1/encounters"
+rhydon_locations = requests.get(api_url).json()
+
+for location in rhydon_locations:
+    for key, value in location.items():
+        print(key, ":", value)
+    print()
+```
+
+This additional code displays only the `name` of the location(s) in which players can encounter the specified Pokémon:
+```python
+for location in rhydon_locations:
+    location_area = location["location_area"]
+    if location_area:
+        name = location_area["name"]
+        if name:
+            print("Rhydon Encounter Location:", name)
+```
+
 ### Pokémon Colors
 ### Pokémon Forms
 ### Pokémon Habitats
