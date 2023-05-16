@@ -36,13 +36,13 @@
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
           {% endif %}
 
-          {% if site.email %}
-            <p class="addr">{{ site.email }}</p>
-          {% endif %}
-
           <p>{{ site.description | default: site.github.project_tagline }}</p>
 
           {% include sidebar.html %}
+
+          {% if site.email %}
+          <p class="addr">{{ site.email }}</p>
+        {% endif %}
 
         </header>
 
