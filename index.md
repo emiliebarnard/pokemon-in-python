@@ -253,6 +253,8 @@ where `id` is an integer (`1` as the lowest option) and `name` is a string refer
 
 #### Examples
 The following Python code retreives JSON data for the Egg Group *Dragon* and stores it into a dictionary with the following keys:
+- `id`: an integer (starting with 1) that acts as the identifier for the Egg Group
+- `name`: the name of the Egg Group (in English)
 - `names`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, name and url. These keys refer to the name and url of the language used to express the Egg Group name.
 - `pokemon_species`: a list of dictionaries with two keys, name and url. These reference all the Pokémon in the Egg Group.
 
