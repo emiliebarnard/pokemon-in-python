@@ -309,6 +309,15 @@ for key in female_data:
     print("key: ", key, "\n", "value:", female_data[key], "\n")
 ```
 
+This additional function checks to see if a Pokémon requires a previous Pokémon to be female for evolution:
+```python
+def gendered_evolution(pokemon):
+    for poke in female_data["required_for_evolution"]:
+        if poke["name"] == pokemon:
+            return True
+    return False
+```
+
 ### Growth Rates
 ### Natures
 ### Pokéatholon Stats
