@@ -645,3 +645,10 @@ for double_damage_to in ghost_data["damage_relations"]["double_damage_to"]:
     print(double_damage_to["name"])
 ```
 
+# More Python Sample Code
+
+## Create Pokédex
+
+## Search Pokémon by Filters
+
+## Display Pokémon Image
