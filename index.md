@@ -363,7 +363,7 @@ for pokemon in erratic_data["pokemon_species"]:
 A Pokémon's *Nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
 
 #### Examples
-The following Python code retreives JSON data for the nature *quirky* and stores it into a dictionary with the following keys:
+The following Python code retreives JSON data for the nature *sassy* and stores it into a dictionary with the following keys:
 - `decreased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature
 - `hates_flavor`: a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature
 - `id`: an integer (starting with 1) that acts as the identifier for the Nature
@@ -379,20 +379,22 @@ import requests
 import json
 
 # fetch the api data and convert to dictionary:
-api_url = "https://pokeapi.co/api/v2/nature/quirky"
-quirky_data = requests.get(api_url).json()
+api_url = "https://pokeapi.co/api/v2/nature/sassy"
+sassy_data = requests.get(api_url).json()
 
 # display all key-value pairs from the JSON data:
-for key in quirky_data:
-    print("key: ", key, "\n", "value:", quirky_data[key], "\n")
+for key in sassy_data:
+    print("key: ", key, "\n", "value:", sassy_data[key], "\n")
 ```
 
 This additional line of code describes a few of the impacts of this nature:
 ```python
-print()
+print("A", sassy_data["name"], "Pokémon has the following attributes:\n",
+      "Increased stat:", sassy_data["increased_stat"]["name"],"\n",
+      "Decreased stat:", sassy_data["decreased_stat"]["name"],"\n",
+      "Likes this flavor:", sassy_data["likes_flavor"]["name"],"\n",
+      "Dislikes this flavor:", sassy_data["hates_flavor"]["name"])
 ```
-
-
 
 ### Pokéatholon Stats
 ### Pokémon Location Areas
