@@ -485,6 +485,44 @@ for location in rhydon_locations:
 ```
 
 ### Pokémon Colors
+Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted in to a color group determined by the color covering most of their body. Note: Orange is not a color option. Orange Pokémon are listed as red or brown.  
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon-color/`
+returns all Pokémon colors. To return results from a specific color use:
+`https://pokeapi.co/api/v2/pokemon-color/{id or name}/`
+where `id` is an integer representing the color's id (`1` as the lowest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
+
+#### Examples
+The following Python code retrieves JSON data for the color *blue* (the id for blue is 2) and stores it into a dictionary with the following keys:
+- `id`: the integer id of the color
+- `name`: the color's name (as a string)
+- `names`: a list of the color's name in different languages
+- `pokemon_species`: a list of Pokémon in this color group
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-color/2/"
+color_2_data = requests.get(api_url).json()
+
+for key in color_2_data:
+    print("key:", key, "\n", "value:", color_2_data[key], "\n")
+```
+
+This additional line of code displays the name of the current color in English:
+```python
+print(color_2_data["name"])
+```
+
+This code prints a list of all the blue Pokémon: 
+```python
+for pokemon in color_2_data["pokemon_species"]:
+    print(pokemon["name"])
+```    
+    
 ### Pokémon Forms
 ### Pokémon Habitats
 ### Pokémon Shapes
