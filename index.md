@@ -115,13 +115,13 @@ The purpose of this section is to provide details on recommended software to dow
 
 ![Python install screen in Microsoft Windows store image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%203.png)
 
-![Python Get Started with Python Development screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%204.png)
+![Python Get Started with Python Development screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%204.png)
 
 4. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window appears at the bottom of the screen.
 
-![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20Image%205%20Terminal.png)
+![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%205%20Terminal.png)
 
-![Python Terminal window below screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/Python%20image%206%20Terminal%20below%20screen.png)
+![Python Terminal window below screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20image%206%20Terminal%20below%20screen.png)
 
 5. In the terminal window, type **pip install requests** and press **enter**. A wall of text will appear; the words **"successfully installed"** will display.
 **Note:** If an error appears, then type **pip3 install requests** instead for the **"succesfully installed"** message to display.
@@ -284,6 +284,8 @@ for pokemon in dragon_data["pokemon_species"]:
 ```
 
 ### Genders
+
+
 ### Growth Rates
 ### Natures
 ### Pokéatholon Stats
