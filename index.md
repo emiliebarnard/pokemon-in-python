@@ -489,8 +489,11 @@ Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted in to a co
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-color/`
+
 returns all Pokémon colors. To return results from a specific color use:
+
 `https://pokeapi.co/api/v2/pokemon-color/{id or name}/`
+
 where `id` is an integer representing the color's id (`1` as the lowest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
 
 #### Examples
