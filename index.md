@@ -644,3 +644,4 @@ This additional line of code displays a list of types this type is very effect a
 for double_damage_to in ghost_data["damage_relations"]["double_damage_to"]:
     print(double_damage_to["name"])
 ```
+
