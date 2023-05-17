@@ -284,7 +284,7 @@ for pokemon in dragon_data["pokemon_species"]:
 ```
 
 ### Genders
-
+Most Pokémon have a *gender*, either male or female, though some species do not. *Genders* impact breeding compatability and sometimes the appearance of a Pokémon.
 
 ### Growth Rates
 ### Natures
