@@ -343,7 +343,19 @@ The following Python code retreives JSON data for the growth rate *erratic* and 
 ```python
 import requests, json
 
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/growth-rate/5"
+erratic_data = requests.get(api_url).json()
 
+# display all key-value pairs from the JSON data:
+for key in erratic_data:
+    print("key: ", key, "\n", "value:", erratic_data[key], "\n")
+```
+
+The following additional code displays all Pokémon with an *erratic* growth rate.
+
+```python
+print()
 ```
 
 ### Natures
