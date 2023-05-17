@@ -301,12 +301,12 @@ The following Python code retreives JSON data for the Gender *female* and stores
 import requests, json
 
 # fetch the api data and convert to dictionary:
-api_url = "https://pokeapi.co/api/v2/egg-group/dragon/"
-dragon_data = requests.get(api_url).json()
+api_url = "https://pokeapi.co/api/v2/gender/female/"
+female_data = requests.get(api_url).json()
 
 # display all key-value pairs from the JSON data:
-for key in dragon_data:
-    print("key: ", key, "\n", "value:", dragon_data[key], "\n")
+for key in female_data:
+    print("key: ", key, "\n", "value:", female_data[key], "\n")
 ```
 
 ### Growth Rates
