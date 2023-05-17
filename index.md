@@ -668,4 +668,9 @@ for pokemon in pokemon_json["results"]:
 
 ## Search Pokémon by Filters
 
+There are various ways to search for Pokémon by filters. Please refer to the example code in the following sections:
+- [Abilities](#abilities)
+- [Egg Group](#egg-group)
+- [Growth Rates](#growth-rates)
+
 ## Display Pokémon Image
