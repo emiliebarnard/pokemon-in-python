@@ -355,10 +355,30 @@ for key in erratic_data:
 The following additional code displays all Pokémon with an *erratic* growth rate.
 
 ```python
-print()
+for pokemon in erratic_data["pokemon_species"]:
+    print(pokemon["name"])
 ```
 
 ### Natures
+A Pokémon's *Nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
+
+#### Examples
+The following Python code retreives JSON data for the nature *quirky* and stores it into a dictionary with the following keys:
+- `decreased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature
+- `hates_flavor`: a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature
+- `id`: an integer (starting with 1) that acts as the identifier for the Nature
+- `increased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is increased by 10% due to this nature
+- `likes_flavor`: a dictionary with two keys, name and url, that identifies the the flavor liked by Pokémon with this nature
+- `move_battle_style_preferences`: a list of dictionaries with three keys, low_hp_preference, high_hp_preference, and move_battle_style. move_battle_stype is a dictionary with two keys, name and url. low_hp_preference and high_hp_preference are integers that refer to how likely a Pokémon with this nature is to use a particular move battle style.
+- `name`: a string, the name of the Nature (in English)
+- `names`: a list of names for this nature in different languages
+- `pokeathlon_stat_changes`: a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted.
+
+```python
+
+```
+
+
 ### Pokéatholon Stats
 ### Pokémon Location Areas
 Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
