@@ -362,6 +362,10 @@ for pokemon in erratic_data["pokemon_species"]:
 ### Natures
 A Pokémon's *Nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
 
+#### API Path
+`https://pokeapi.co/api/v2/nature/{id or name}`
+where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *nature*
+
 #### Examples
 The following Python code retreives JSON data for the nature *sassy* and stores it into a dictionary with the following keys:
 - `decreased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature
@@ -372,7 +376,7 @@ The following Python code retreives JSON data for the nature *sassy* and stores 
 - `move_battle_style_preferences`: a list of dictionaries with three keys, low_hp_preference, high_hp_preference, and move_battle_style. move_battle_stype is a dictionary with two keys, name and url. low_hp_preference and high_hp_preference are integers that refer to how likely a Pokémon with this nature is to use a particular move battle style.
 - `name`: a string, the name of the Nature (in English)
 - `names`: a list of names for this nature in different languages
-- `pokeathlon_stat_changes`: a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted.
+- `pokeathlon_stat_changes`: a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted. See (Pokéatholon Stats)[#pokéatholon-stats] for more information.
 
 ```python
 import requests
@@ -397,6 +401,33 @@ print("A", sassy_data["name"], "Pokémon has the following attributes:\n",
 ```
 
 ### Pokéatholon Stats
+A Pokéatholon is a competion where Pokémon race, jump, and participate in other field events. *Pokéatholon Stats* define how a Pokémon performs in these events. There are five different stats:
+- speed
+- power
+- skill
+- stamina
+- jump
+
+#### API Path
+`https://pokeapi.co/api/v2/pokeathlon-stat/{id or name}`
+where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
+
+#### Examples
+The following Python code retreives JSON data for the Pokéatholon Stat *jump* and stores it into a dictionary with the following keys:
+- `affecting_natures`: a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impaced. See (Natures)[#natures] for more information.
+- `id`: an integer (starting with 1) that acts as the identifier for the stat
+- `name`: a string, the name of the stat (in English)
+- `names`: a list of names for this skill in different languages
+
+```python
+
+```
+
+The following code snippet displays how various Natures impact *jump*:
+```python
+
+```
+
 ### Pokémon Location Areas
 Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
 
