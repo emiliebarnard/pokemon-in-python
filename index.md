@@ -375,8 +375,23 @@ The following Python code retreives JSON data for the nature *quirky* and stores
 - `pokeathlon_stat_changes`: a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted.
 
 ```python
+import requests
+import json
 
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/nature/quirky"
+quirky_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in quirky_data:
+    print("key: ", key, "\n", "value:", quirky_data[key], "\n")
 ```
+
+This additional line of code describes a few of the impacts of this nature:
+```python
+print()
+```
+
 
 
 ### Pokéatholon Stats
