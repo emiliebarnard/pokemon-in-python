@@ -82,22 +82,24 @@ The documentation is organized as follows:
 
 # Getting Started
 **Objective**
-The purpose of this section is to provide details on recommended software to download and how to set up before beginning to code with Python.
+The purpose of this section is to provide details on how to download and setup Visual Studio Code and Python programs for coding with the PokéAPI.
 
-**Disclaimer:** The instructions provided within this section will work for both Microsoft Windows and Mac users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
+**Disclaimer:** The instructions provided within this section will work for both Microsoft Windows, Mac, and Linux users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
 
 **Visual Studio Code Requirements**
 * **Hardware:** 1.6GHZ or faster processor (recommended)
-* **System OS:** Microsoft Windows 10 and 11 (32-bit and 64-bit), macOS X (High Sierra 10.13+)
+* **System OS:** Microsoft Windows 10 and 11 (32-bit and 64-bit), macOS X (High Sierra 10.13+), Linux (Debian): Ubuntu Desktop 16.04, Debian 9, & Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 34
 * System requirements documentation: https://code.visualstudio.com/docs/supporting/requirements
 
-**Python**
+**Python Requirements**
 * **Hardware:** 8GB RAM or higher (recommended)
-* **Software:** Latest Python version 3.11.3 release - Microsoft Windows 10 or 11 and macOS 13 or higher
-* Python version releases for Microsoft Windows: https://www.python.org/downloads/windows/
-* Python version releases for macOS: https://www.python.org/downloads/macos/
-* Python documentation (first time use) for Microsoft Windows: https://docs.python.org/3/using/windows.html
-* Python documentation (first time use) for macOS: https://docs.python.org/3/using/mac.html
+* **Software:** Latest Python version 3.11.3 release - Microsoft Windows 10 or 11 and macOS 13 or higher, & Linux (pre-installed) for most systems.
+* Python version releases for [Microsoft Windows](https://www.python.org/downloads/windows/).
+* Python version releases for [macOS](https://www.python.org/downloads/macos/).
+* Python version releases for [Linux](https://www.python.org/downloads/source/).
+* Python documentation for [Microsoft Windows](https://docs.python.org/3/using/windows.html).
+* Python documentation for [macOS](https://docs.python.org/3/using/mac.html).
+* Python documentation for [Linux](https://docs.python.org/3/using/unix.html).
 
 ## Visual Studio Code & Python Software (Setup)
 1. Download [Visual Studio Code](https://code.visualstudio.com/).
@@ -105,7 +107,7 @@ The purpose of this section is to provide details on recommended software to dow
 
 ![Visual Studio Code choose operating system image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image%202.png)
 
-2. Download [Python](https://www.python.org/downloads/). **Note:** Some Windows users may need to download Python directly from the Microsoft Store instead. This can be done [here](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K?hl=en-us&gl=us).
+2. Download [Python](https://www.python.org/downloads/). **Note:** Some Windows users may need to download Python directly from the Microsoft Store instead. This can be done [here](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K?hl=en-us&gl=us). The software auto-detects your OS for download.
 ![Python download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image.png)
 
 3. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code.
@@ -128,18 +130,17 @@ The purpose of this section is to provide details on recommended software to dow
 
 ![Python success message in termail screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%207%20Success%20Message.png)
 
-### PokéAPI (How to use)
+### How to use PokéAPI site
 **Disclaimer:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
 
-The PokéAPI site allows users to generate Pokémon attributes by typing in the name of a Pokémon. The resource for the Pokemon entered displays attributes from the API pull request. Below are example instructions of how to display Pikachu's traits.
+The PokéAPI site allows users to generate Pokémon attributes by typing in the name of a Pokémon. The resource for the Pokemon entered displays attributes from the API pull request. Below are example instructions of how to display Pikachu's traits. To perform the actions below, visit the [PokéAPI](https://pokeapi.co/) site.
 
-1. Place mouse cursor on search bar and replace **Ditto** with **Pikachu**.
+1. Place mouse cursor on search bar and replace pokemon/ditto with pokemon/pikachu (for example).
 2. Click the **Submit** button.
-3. Review the resource attributes below of the API’s result displaying Pikachu’s traits.
+3. Review the resource attributes below of the API’s result displaying Pikachu’s traits. You will use these resource attributes to create your Python code and generate API requests for Pokémon in the **Core Python Interactions** section.
 
 ![Pikachu API attribute display screen image example](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/PokeAPI%20Image%20Pikachu%20Example.png)
 
-**Note:** Next steps involve coding with Python to generate an API request for Pokémon.
 
 # Core Python Interactions
 
