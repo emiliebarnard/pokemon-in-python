@@ -286,6 +286,29 @@ for pokemon in dragon_data["pokemon_species"]:
 ### Genders
 Most Pokémon have a *gender*, either male or female, though some species do not. *Genders* impact breeding compatability and sometimes the appearance of a Pokémon.
 
+#### API Path
+`https://pokeapi.co/api/v2/gender/{id or name}/`
+where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *gender*
+
+#### Examples
+The following Python code retreives JSON data for the Gender *female* and stores it into a dictionary with the following keys:
+- `id`: an integer (starting with 1) that acts as the identifier for the Gender
+- `name`: the name of the Gender (in English)
+- `pokemon_species_details`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, rate and pokemon_species. rate refers to the likelihood of a Pokémon species being this gender, out of ?. pokemon_species is a dictionary with keys name and url, both referring to the Pokémon that can be this gender.
+- `required_for_evolution`: a list of dictionaries with two keys, name and url. These reference all the Pokémon that require a previous Pokémon to be this specific gender in order to evolve into them.
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/egg-group/dragon/"
+dragon_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in dragon_data:
+    print("key: ", key, "\n", "value:", dragon_data[key], "\n")
+```
+
 ### Growth Rates
 ### Natures
 ### Pokéatholon Stats
