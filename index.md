@@ -16,7 +16,7 @@ If you are reading this documentation, we assume you know what Pokémon is, have
 
 
 ## What is PokéAPI?
-[PokéAPI](https://pokeapi.co/) is a modern [RESTful Application Programming Interface (API)](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) for developers to quickly consume the Pokémon data required for their projects. The data includes Pokémon moves, abilities, types, egg groups, and more.
+[PokéAPI](https://pokeapi.co/) is a modern [RESTful Application Programming Interface (API)](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) for developers to quickly consume Pokémon data required for their projects. The data includes Pokémon moves, abilities, types, egg groups, and more.
 
 ## What are Python dictionaries?
 <i>Dictionaries</i> are Python’s implementation of a data structure. The API URL line retrieves the relevant data in a JSON file and then in Python we convert the JSON file into a <i>dictionary</i>.
