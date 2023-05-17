@@ -287,7 +287,7 @@ for pokemon in dragon_data["pokemon_species"]:
 Most Pokémon have a *gender*, either male or female, though some species do not. *Genders* impact breeding compatability and sometimes the appearance of a Pokémon.
 
 #### API Path
-`https://pokeapi.co/api/v2/gender/{id or name}/`
+`https://pokeapi.co/api/v2/gender/{id or name}`
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *gender*
 
 #### Examples
@@ -319,6 +319,33 @@ def gendered_evolution(pokemon):
 ```
 
 ### Growth Rates
+A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The options are as follows:
+- erratic
+- fast
+- medium fast
+- medium slow
+- slow
+- fluctuating
+
+#### API Path
+`https://pokeapi.co/api/v2/growth-rate/{id or name}`
+where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *growth rate*
+
+#### Examples
+The following Python code retreives JSON data for the growth rate *erratic* and stores it into a dictionary with the following keys:
+- `id`: an integer (starting with 1) that acts as the identifier for the Gender
+- `name`: a string, the name of the growth rate (in English)
+- `formula`: a string that represents the mathematical formula used to cacluate the rate at which a Pokémon levels up, based on current level and the specific growth rate
+- `descriptions`: a list of dictionaries with keys description and language. language is also a dictionary with keys name and url. This is a list of the descriptions of the growth rate in various languages.
+- `levels`: a list of dictionaires with keys level and experience. This indicates how much experience is needed to level up based on the current level and growth rate.
+- `pokemon_species`: a list of dictionaries with keys name and url. This is a list of all Pokémon that level up at this growth rate.
+
+```python
+import requests, json
+
+
+```
+
 ### Natures
 ### Pokéatholon Stats
 ### Pokémon Location Areas
