@@ -540,7 +540,6 @@ for pokemon in color_2_data["pokemon_species"]:
 - sea
 - urban
 - waters-edge
-More information can be found on [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_habitat).
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`
@@ -592,7 +591,6 @@ for pokemon_species in forest_data["pokemon_species"]:
 - humanoid
 - bug-wings
 - armor
-More information can be found on [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_shape).
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`
