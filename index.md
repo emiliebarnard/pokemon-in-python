@@ -527,8 +527,107 @@ for pokemon in color_2_data["pokemon_species"]:
 ```    
     
 ### Pokémon Forms
-### Pokémon Habitats
-### Pokémon Shapes
+
+
+### Pokémon Habitats
+*Pokémon Habitats* are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon. There are nine habitats:
+- cave
+- forest
+- grassland
+- mountain
+- rare
+- rough-terrain
+- sea
+- urban
+- waters-edge
+More information can be found on [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_habitat).
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+
+#### Examples
+The following Python code retreives JSON data for the shape named *forest* and stores it into a dictionary with the following keys:
+- `id`: the identifier for this resource
+- `name`: the name for this resource
+- `names`: the name of this resource listed in different languages
+- `pokemon_species`: a list of the Pokémon species that can be found in this habitat
+
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-habitat/forest/"
+forest_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in forest_data:
+    print("key: ", key, "\n", "value:", forest_data[key], "\n")
+```
+
+This additional line of code displays all Pokémon that can be found in this habitat:
+<br>
+```python
+for pokemon_species in forest_data["pokemon_species"]:
+    print(pokemon_species["name"])
+```
+<br>
+
+### Pokémon Shapes
+*Pokémon Shape* is used for sorting Pokémon in a Pokédex. There are 14 shapes:
+- ball
+- squiggle
+- fish
+- arms
+- blob
+- upright
+- legs
+- quadruped
+- wings
+- tentacles
+- heads
+- humanoid
+- bug-wings
+- armor
+More information can be found on [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_shape).
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`
+
+where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+
+#### Examples
+The following Python code retreives JSON data for the shape named *ball* and stores it into a dictionary with the following keys:
+- `awesome_names`: the "scientific" name of this Pokémon shape listed in different languages
+- `id`: the identifier for this resource
+- `name`: the name for this resource
+- `names`: the name of this resource listed in different languages
+- `pokemon_species`: a list of the Pokémon species that have this shape
+
+<br>
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-shape/ball"
+ball_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in ball_data:
+    print("key: ", key, "\n", "value:", ball_data[key], "\n")
+```
+
+This additional line of code displays all Pokémon that have this shape:
+<br>
+```python
+for pokemon_species in ball_data["pokemon_species"]:
+    print(pokemon_species["name"])
+```
+<br>
     
 ### Pokémon Species
 A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
