@@ -540,6 +540,7 @@ for pokemon in color_2_data["pokemon_species"]:
 - sea
 - urban
 - waters-edge
+<br>
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`
@@ -591,6 +592,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 - humanoid
 - bug-wings
 - armor
+<br>
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`
