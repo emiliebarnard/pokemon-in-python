@@ -674,6 +674,7 @@ import requests, json
 api_url = "https://pokeapi.co/api/v2/pokemon-species/butterfree"
 butterfree_data = requests.get(api_url).json()
 
+# display all key-value pairs from the JSON data:
 for key in butterfree_data:
     print("key: ", key, "\n", "value:", butterfree_data[key], "\n")
 ```
@@ -723,6 +724,7 @@ import requests, json
 api_url = "https://pokeapi.co/api/v2/stat/attack"
 attack_data = requests.get(api_url).json()
 
+# display all key-value pairs from the JSON data:
 for key in attack_data:
     print("key: ", key, "\n", "value:", attack_data[key], "\n")
 ```
@@ -768,6 +770,7 @@ import requests, json
 api_url = "https://pokeapi.co/api/v2/type/ghost"
 ghost_data = requests.get(api_url).json()
 
+# display all key-value pairs from the JSON data:
 for key in ghost_data:
     print("key: ", key, "\n", "value:", ghost_data[key], "\n")
 ```
