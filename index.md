@@ -485,7 +485,7 @@ for location in rhydon_locations:
 ```
 
 ### Pokémon Colors
-Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted in to a color group determined by the color covering most of their body. Note: Orange is not a color option. Orange Pokémon are listed as red or brown.  
+Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted in to a color group determined by the color covering most of their body. **Note**: Orange is not a color option. Orange Pokémon are listed as red or brown.  
 
 #### API Path
 `https://pokeapi.co/api/v2/pokemon-color/`
@@ -527,7 +527,60 @@ for pokemon in color_2_data["pokemon_species"]:
 ```    
     
 ### Pokémon Forms
+Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pokémon that vary more than just visually are listed as different Pokémon entities. 
 
+#### API Path
+`https://pokeapi.co/api/v2/pokemon-form/{id or name}/`
+
+where `id` is an integer representing the  Pokémon's id (`1` as the lowest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
+
+#### Examples
+The following Python code retrieves JSON data for the West form of  the Pokémon 'Shellos' (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys:
+- `id`: the Pokémon's id (as an integer) 
+- `name`: the Pokémon's name (as a string)
+- `order`: an integer that indicates where in the list of all Pokémon forms the Pokémon form you are looking for is located
+- `form_order`: the order this Pokémon form appears relative to other Pokémon of the same species
+- `is_default`: set to 'true' for only one Pokémon can be set to default within a species 
+- `is_battle_only`: a boolean indicating if the form can only happen in battle
+- `is_mega`: a boolean indicating if the form is a mega form or not
+- `form_name`: the name of the form (as a string)
+- `pokemon`: the Pokémon that can take this form including their API path
+- `types`: a list of the types this Pokémon form has
+- `sprites`: URL links to the sprites used to represent this Pokémon form
+- `version_group`: the version name and API path for the version group this Pokémon form was introduced in 
+- `names`: a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist)
+- `form_names`: a list of the specific form names for this Pokemon form in different languages  (this is empty if no specific names exist)
+<br>
+
+```python
+import requests, json
+
+# fetch the api data for Shellos West and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-form/422"
+shellos_w_form_data = requests.get(api_url).json()
+
+for key in shellos_w_form_data:
+    print("key:", key, "\n", "value:", shellos_w_form_data[key], "\n")
+```  
+
+Shellos also has an East form. This additional code gets information about Shellos's East form:
+```python
+# fetch the api data for Shellos East and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon-form/10039"
+shellos_e_form_data = requests.get(api_url).json()
+
+for key in shellos_e_form_data:
+    print("key:", key, "\n", "value:", shellos_e_form_data[key], "\n")
+```  
+
+The two versions of Shellos are right next to each other in the Pokemon Forms Order. To see their order numbers together use this additional line of code: 
+```python
+print("Shellos West's Order Number is", shellos_w_form_data["order"], "and Shellos East's Order Number is", shellos_e_form_data["order"]) 
+```  
+
+**Note**: Searching for just 'Shellos' using the API like this:
+`https://pokeapi.co/api/v2/pokemon-form/shellos`
+returns an error because Shellos has two forms and the API needs you to specifiy which form you want information about. 
 
 ### Pokémon Habitats
 *Pokémon Habitats* are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon. There are nine habitats:
