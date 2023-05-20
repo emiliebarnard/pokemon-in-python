@@ -476,12 +476,8 @@ for location in rhydon_locations:
 
 This additional code displays only the `name` of the location(s) in which players can encounter the specified Pokémon:
 ```python
-for location in rhydon_locations:
-    location_area = location["location_area"]
-    if location_area:
-        name = location_area["name"]
-        if name:
-            print("Rhydon Encounter Location:", name)
+ for location in rhydon_locations:
+    print("Rhydon Encounter Location:", location["location_area"]["name"])
 ```
 
 ### Pokémon Colors
@@ -560,7 +556,7 @@ api_url = "https://pokeapi.co/api/v2/pokemon-form/422"
 shellos_w_form_data = requests.get(api_url).json()
 
 for key in shellos_w_form_data:
-    print("key:", key, "\n", "value:", shellos_w_form_data[key], "\n")
+    print("key:", key, "\n", "value:", shellos_w_form_data[key], "\n")
 ```  
 
 Shellos also has an East form. This additional code gets information about Shellos's East form:
@@ -570,7 +566,7 @@ api_url = "https://pokeapi.co/api/v2/pokemon-form/10039"
 shellos_e_form_data = requests.get(api_url).json()
 
 for key in shellos_e_form_data:
-    print("key:", key, "\n", "value:", shellos_e_form_data[key], "\n")
+    print("key:", key, "\n", "value:", shellos_e_form_data[key], "\n")
 ```  
 
 The two versions of Shellos are right next to each other in the Pokemon Forms Order. To see their order numbers together use this additional line of code: 
