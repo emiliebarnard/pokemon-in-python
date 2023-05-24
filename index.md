@@ -147,6 +147,65 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 ## Pokémon
 some intro here
 
+### Evolution
+Many Pokémon have an evolution attribute that transforms into a new type of Pokémon  from their family tree. A Pokémon’s new form consists of new abilities and can often turn the tide in battle.
+
+#### API Path
+`https://pokeapi.co/api/v2/evolution-chain/{id}/` where id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+
+#### Examples
+The following Python code retrieves JSON data for the Pokémon Magikarp (`id` = `64`) and stores it into a dictionary with the following keys:
+- `id`: the number associated with the Pokémon as an identifier.
+- `baby_trigger_item`: the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form.
+- `chain`: the base link to indicate all evolution details of the identified Pokémon and showcase evolution order.
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/evolution-chain/64/"
+evolution_chain_data = requests.get(api_url).json()
+```
+This line of code displays chain data for listed Pokémon:
+
+```python
+# display all key-value pairs from the JSON data:
+for key in evolution_chain_data:
+    print("key: ", key, "\n", "value:", evolution_chain_data[key], "\n")
+    for pokemon in evolution_chain_data["chain"]:
+        print(pokemon)
+```
+### Evolution Triggers
+Pokémon transformations occur when a condition is met to where the Pokémon changes into a specific type or form. For more details on evolution methods that trigger transformations, please refer to [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution).
+
+#### API Path
+`https://pokeapi.co/api/v2/evolution-trigger/{id or name}/` where id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+
+#### Examples
+The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys:
+
+- `id`: the number associated with the Pokémon as an identifier.
+- `name`: the name of the Pokémon identified.
+- `names`: the name of the Pokémon  identified used for multiple languages.
+- `pokémon_species`: a comprehensive list of Pokémon types associated with evolutions.
+
+```python
+import requets, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/evolution-trigger/8/"
+evolution_trigger_data = requests.get(api_url).json()
+```
+This line of code displays three critical hits data for listed Pokémon:
+
+```python
+# display all key-value pairs from the JSON data:
+for key in evolution_trigger_data:
+    print("key: ", key, "\n", "value:", evolution_trigger_data[key], "\n")
+    for pokemon in evolution_trigger_data["pokemon_species"]:
+        print(pokemon)
+```
+
 ### Abilities
 An <i>ability</i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given time. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</a>.
 
