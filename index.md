@@ -162,8 +162,7 @@ The following Python code retrieves JSON data for the Pokémon Magikarp (`id` =
 - `baby_trigger_item`: the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form.
 - `chain`: the base link to indicate all evolution details of the identified Pokémon and showcase evolution order.
 
-
-**Note:** There are a total of 530 evolution chains to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 13 evolution triggers to use by id to enter into Python.
+**Note:** There are a total of 530 evolution chains to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 530 evolution chains to use by id to enter into Python.
 
 ```python
 import requests, json
