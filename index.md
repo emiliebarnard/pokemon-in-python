@@ -162,6 +162,7 @@ The following Python code retrieves JSON data for the Pokémon Magikarp (`id` =
 - `baby_trigger_item`: the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form.
 - `chain`: the base link to indicate all evolution details of the identified Pokémon and showcase evolution order.
 
+
 **Note:** There are a total of 530 evolution chains to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 13 evolution triggers to use by id to enter into Python.
 
 ```python
@@ -195,6 +196,7 @@ The following Python code retrieves JSON data for the Pokémon evolution trigge
 - `name`: the name of the Pokémon identified.
 - `names`: the name of the Pokémon  identified used for multiple languages.
 - `pokémon_species`: a comprehensive list of Pokémon types associated with evolutions.
+
 
 **Note:** There are a total of 13 evolution triggers to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 13 evolution triggers to use by id or name to enter into Python.
 
@@ -236,6 +238,7 @@ The following Python code retrieves JSON data for the Pokémon move damage clas
 - `moves`: a list of abilities associated with damage class Pokémon.
 - `names`: the name of the Pokémon  identified used for multiple languages.
 
+
 **Note:** There are a total of 3 move damage classes to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
 
 ```python
@@ -271,6 +274,7 @@ The following Python code retrieves JSON data for the Pokémon move learn metho
 - `names`: the name of the Pokémon  identified used for multiple languages.
 - `version_groups`: a list showing the different types of Pokémon that learn moves from specific groups.
 
+
 **Note**: There are a total of 11 move learn methods to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
 
 ```python
@@ -305,6 +309,7 @@ The following Python code retrieves JSON data for the Pokémon move target `fai
 - `descriptions`: the displayed information of a Pokémon  used in multiple languages.
 - `moves`: a list of abilities associated with damage class Pokémon.
 - `names`: the name of the Pokémon  identified used for multiple languages.
+
 
 **Note:** There are a total of 16 move targets to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
 
