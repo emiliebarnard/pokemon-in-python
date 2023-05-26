@@ -151,13 +151,18 @@ some intro here
 Many Pokémon have an evolution attribute that transforms into a new type of Pokémon  from their family tree. A Pokémon’s new form consists of new abilities and can often turn the tide in battle.
 
 #### API Path
-`https://pokeapi.co/api/v2/evolution-chain/{id}/` where id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+`https://pokeapi.co/api/v2/evolution-chain/{id}/` 
+
+id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 The following Python code retrieves JSON data for the Pokémon Magikarp (`id` = `64`) and stores it into a dictionary with the following keys:
+
 - `id`: the number associated with the Pokémon as an identifier.
 - `baby_trigger_item`: the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form.
 - `chain`: the base link to indicate all evolution details of the identified Pokémon and showcase evolution order.
+
+**Note:** There are a total of 530 evolution chains to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 13 evolution triggers to use by id to enter into Python.
 
 ```python
 import requests, json
@@ -179,7 +184,9 @@ for key in evolution_chain_data:
 Pokémon transformations occur when a condition is met to where the Pokémon changes into a specific type or form. For more details on evolution methods that trigger transformations, please refer to [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution).
 
 #### API Path
-`https://pokeapi.co/api/v2/evolution-trigger/{id or name}/` where id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+`https://pokeapi.co/api/v2/evolution-trigger/{id or name}/`
+
+id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys:
@@ -189,8 +196,10 @@ The following Python code retrieves JSON data for the Pokémon evolution trigge
 - `names`: the name of the Pokémon  identified used for multiple languages.
 - `pokémon_species`: a comprehensive list of Pokémon types associated with evolutions.
 
+**Note:** There are a total of 13 evolution triggers to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 13 evolution triggers to use by id or name to enter into Python.
+
 ```python
-import requets, json
+import requests, json
 
 # fetch the api data and convert to dictionary:
 api_url = "https://pokeapi.co/api/v2/evolution-trigger/8/"
@@ -203,6 +212,116 @@ This line of code displays three critical hits data for listed Pokémon:
 for key in evolution_trigger_data:
     print("key: ", key, "\n", "value:", evolution_trigger_data[key], "\n")
     for pokemon in evolution_trigger_data["pokemon_species"]:
+        print(pokemon)
+```
+### Moves
+Pokémon have an assortment of skills and can range from class type to specfic conditions to initiate. This section will provide a list of various move types to try in Python. Hot dog! Wasn't this a cool intro line? :)
+
+Placehoder for teammate's info. 
+
+### Move Damage Class
+Certain types of Pokémon have a variety of moves that are special skills to be used against other opponents where these specialzed Pokémon are associated with a damage class.
+
+#### API Path
+`https://pokeapi.co/api/v2/move-damage-class/{id or name}/`
+
+id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+
+#### Examples
+The following Python code retrieves JSON data for the Pokémon move damage class `special` (`id` = `3`) and stores it into a dictionary with the following keys:
+
+- `id`: the number associated with the Pokémon as an identifier.
+- `name`: the name of the Pokémon identified.
+- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
+- `moves`: a list of abilities associated with damage class Pokémon.
+- `names`: the name of the Pokémon  identified used for multiple languages.
+
+**Note:** There are a total of 3 move damage classes to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-damage-class/3/"
+move_damage_class = requests.get(api_url).json()
+```
+This line of code displays specials for Pokémon:
+
+```python
+# display all key-value pairs from the JSON data:
+for key in move_damage_class:
+    print("key: ", key, "\n", "value:", move_damage_class[key], "\n")
+    for pokemon in move_damage_class["moves"]:
+        print(pokemon)
+```
+### Move Learn Method
+Pokémon that learn moves from certain methods whether it is from leveling or otherwise. This section focuses on how to identify these types of Pokémon.
+
+#### API Path
+`https://pokeapi.co/api/v2/move-learn-method/{id or name}/`
+
+id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+
+#### Examples
+The following Python code retrieves JSON data for the Pokémon move learn method `form change` (`id` = `9`) and stores it into a dictionary with the following keys:
+
+- `id`: the number associated with the Pokémon as an identifier.
+- `name`: the name of the Pokémon identified.
+- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
+- `names`: the name of the Pokémon  identified used for multiple languages.
+- `version_groups`: a list showing the different types of Pokémon that learn moves from specific groups.
+
+**Note**: There are a total of 11 move learn methods to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-learn-method/9/"
+move_learn_method = requests.get(api_url).json()
+```
+This line of code displays form change names for Pokémon:
+
+```python
+# display all key-value pairs from the JSON data:
+for key in move_learn_method:
+    print("key: ", key, "\n", "value:", move_learn_method[key], "\n")
+    for pokemon in move_learn_method["name"]:
+        print(pokemon)
+```
+### Move Targets
+An ability to lock on to a Pokémon, environments, or other targetable attributes. This section will focus on how to identify these types of move targets. 
+
+#### API Path
+`https://pokeapi.co/api/v2/move-target/{id or name}/`
+
+id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+
+#### Exmaples
+The following Python code retrieves JSON data for the Pokémon move target `fainting Pokémon`  (`id` = `16`) and stores it into a dictionary with the following keys:
+
+- `id`: the number associated with the Pokémon as an identifier.
+- `name`: the name of the Pokémon identified.
+- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
+- `moves`: a list of abilities associated with damage class Pokémon.
+- `names`: the name of the Pokémon  identified used for multiple languages.
+
+**Note:** There are a total of 16 move targets to choose from. Use the API path on the [PokéAPI site](https://pokeapi.co/) and remove {id or name} portion to initiate a search to see a list of 3 move damage classes to use by id or name to enter into Python.
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-target/16/"
+move_target = requests.get(api_url).json()
+```
+This line of code displays fainting Pokémon moves:
+
+```python
+# display all key-value pairs from the JSON data:
+for key in move_target:
+    print("key: ", key, "\n", "value:", move_target[key], "\n")
+    for pokemon in move_target["moves"]:
         print(pokemon)
 ```
 
