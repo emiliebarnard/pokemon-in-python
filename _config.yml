@@ -23,7 +23,7 @@ url: "https://emiliebarnard.github.io/pokemon-in-python/" # the base hostname & 
 # github_username:  jekyll
 
 # Build settings
-markdown: kramdown
+markdown: GFM
 
 remote_theme: lijqhs/minimalist
 
