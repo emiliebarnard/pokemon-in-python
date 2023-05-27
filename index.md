@@ -224,7 +224,9 @@ Pokémon use moves in battle. Some moves are used outside of battle, but only in
 where id is an integer representing the move's `id` (`1` as the lowest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
 
 ### Examples
+
 The following Python code retrieves JSON data for the move called 'bubble' (the id for bubble is 145) and stores it into a dictionary with the following keys:
+
 | Name  | Description | Type |
 | ----- | ----------- | ---- |
 | `id` | the move's id | integer |
