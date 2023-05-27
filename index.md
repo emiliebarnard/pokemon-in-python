@@ -253,6 +253,7 @@ The following Python code retrieves JSON data for the move called 'bubble' (the 
 | `super_contest_effect` | the effect this move has in a super contest | APIResource(SuperContestEffect) object |
 | `target` | the type of target receiving the effects of this move | NamedAPIResource(MoveTarget) object |
 | `type` | the elemental type of this move | NamedAPIResource(Type) object |
+
 <br>
 
 ```python
