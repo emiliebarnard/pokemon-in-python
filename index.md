@@ -216,9 +216,62 @@ for key in evolution_trigger_data:
         print(pokemon)
 ```
 ### Moves
-Pokémon have an assortment of skills and can range from class type to specfic conditions to initiate. This section will provide a list of various move types to try in Python. Hot dog! Wasn't this a cool intro line? :)
+Pokémon have an assortment of skills and can range from class type to specfic conditions to initiate. This section will provide a list of various move types to try in Python. 
+Pokémon use moves in battle. Some moves are used outside of battle, but only in specific situations related to exploring new areas. 
 
-Placehoder for teammate's info. 
+### API Path
+`https://pokeapi.co/api/v2/move/{id or name}/`
+where id is an integer representing the move's `id` (`1` as the lowest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
+
+### Examples
+The following Python code retrieves JSON data for the move called 'bubble' (the id for bubble is 145) and stores it into a dictionary with the following keys:
+| Name  | Description | Type |
+| ----- | ----------- | ---- |
+| `id` | the move's id | integer |
+| `name` | the move's name | string |
+| `accuracy` | the chance of this move's success as a percentage value | integer |
+| `effect_chance` | the chance of this move's effect happening as a percentage value | integer |
+| `pp` | this move's power points (power points determine the number of times a move can be used) | integer |
+| `priority` | sets the order of moves in battle with values between -8 and 8 ([See Bulbapedia for more information about priority](https://bulbapedia.bulbagarden.net/wiki/Priority)) | integer |
+| `power` | the power of this move (moves without a base power have a value of 0) | integer |
+| `contest_combos` | the contest combos this move is involved in the information includes which normal or super moves are used before or after this move | ContestComboSets object |
+| `contest_type` | the type of appeal this moves gives Pokémon when they use it in a contest  | NamedAPIRecourse(ContestType) object |
+| `contest_effect` | the effect this move has when used in a contest | APIRsource(ContestEffect) object |
+| `damage_class` | the type of damage this move does | NamedAPIResource(MoveDamageClass) object |
+| `effect_entries` | the effect of this move in different languages | list |
+| `effect_changes` | previous effects this move had across version groups in different games | list |
+| `learned_by_pokemon` | Pokémon capable of learning this move | list |
+| `flavor_text_entries` | the flavor text for this move in different languages | list |
+| `generation` | the generation this move was introduced | NamedAPIResource(Generation) object |
+| `machines` | machines this move is learned from | list |
+| `meta` | Metadata about this move | MoveMetaData object |
+| `names` | names for this move in different languages | list |
+| `past_values` | move resource values changes in different games | list |
+| `stat_changes` | the stats changed with the amount they change | list |
+| `super_contest_effect` | the effect this move has in a super contest | APIResource(SuperContestEffect) object |
+| `target` | the type of target receiving the effects of this move | NamedAPIResource(MoveTarget) object |
+| `type` | the elemental type of this move | NamedAPIResource(Type) object |
+<br>
+
+```python
+import requests, json
+
+# fetch the api data for the move called bubble and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move/bubble"
+bubble_data = requests.get(api_url).json()
+
+for key in bubble_data:
+    print("key:", key, "\n", "value:", bubble_data[key], "\n")
+```
+
+This additional code returns a list of Pokémon who can have the Bubble move:
+
+```python
+for pokemon in bubble_data["learned_by_pokemon"]:
+    print(pokemon["name"])
+```
+
+
 
 ### Move Damage Class
 Certain types of Pokémon have a variety of moves that are special skills to be used against other opponents where these specialzed Pokémon are associated with a damage class.
