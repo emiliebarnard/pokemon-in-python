@@ -217,13 +217,13 @@ for key in evolution_trigger_data:
 ```
 ### Moves
 Pokémon have an assortment of skills and can range from class type to specfic conditions to initiate. This section will provide a list of various move types to try in Python. 
-Pokémon use moves in battle. Some moves are used outside of battle, but only in specific situations related to exploring new areas. 
+Pokémon use *moves* in battle. Some moves are used outside of battle, but only in specific situations related to exploring new areas. 
 
-### API Path
+#### API Path
 `https://pokeapi.co/api/v2/move/{id or name}/`
 where id is an integer representing the move's `id` (`1` as the lowest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
 
-### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the move called 'bubble' (the id for bubble is 145) and stores it into a dictionary with the following keys:
 
@@ -274,6 +274,113 @@ for pokemon in bubble_data["learned_by_pokemon"]:
     print(pokemon["name"])
 ```
 
+### Move Ailments
+*Move ailments* are status conditions caused by moves.   
+
+#### API Path
+`https://pokeapi.co/api/v2/move-ailment/{id or name}/`
+where `id` is an integer representing the move ailment's id (`1` as the lowest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
+
+#### Examples
+
+The following Python code retrieves JSON data for the move ailment called 'sleep' (the id for sleep is 2) and stores it into a dictionary with the following keys:
+
+- `id`: the integer id of the move ailment 
+- `name`: the move ailment's name (as a string)
+- `moves`: a list of moves that cause this ailment 
+- `names`: a list of names for this move ailment in different languages 
+
+<br>
+
+```python
+import requests, json
+
+# fetch the api data for the move ailment called sleep and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-ailment/2"
+sleep_data = requests.get(api_url).json()
+
+for key in sleep_data:
+    print("key:", key, "\n", "value:", sleep_data[key], "\n")
+```
+
+This additional code returns a list of moves that create the ailment effect:
+
+```python
+for language in attack_data["names"]:
+    print(language["name"])
+```
+
+### Move Battle Styles
+Pokémon moves have one of three different *move battle styles*. The three styles are:
+
+- Attack
+- Defense
+- Support 
+
+#### API Path
+`https://pokeapi.co/api/v2/move-battle-style/{id or name}/`
+where `id` is an integer representing the move battle style id (`1` as the lowest option and `3` as the highest option) and `name` is a lower-case string (the move battle style name) where spaces are replaced with `-`
+
+#### Examples
+The following Python code retrieves JSON data for the move battle style called 'attack' (the id for attack is 1) and stores it into a dictionary with the following keys:
+
+- `id`: the integer id of the move battle style
+- `name`: the move battle style's name (as a string)
+- `names`: a list of names for this move battle style in different languages 
+<br>
+
+```python
+import requests, json
+
+# fetch the api data for the attack move battle style and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-battle-style/1"
+attack_data = requests.get(api_url).json()
+
+for key in attack_data:
+    print("key:", key, "\n", "value:", attack_data[key], "\n")
+```
+
+This additional code prints the move battle style's name in all languages (the two languages available are French and English):
+
+```python
+for language in attack_data["names"]:
+    print(language["name"])
+```
+
+### Move Categories
+General *move categories* grouping similar move effects together. 
+
+#### API Path
+`https://pokeapi.co/api/v2/move-category/{id or name}/`
+where `id` is an integer representing the move categories id (`0` as the lowest option and `13` as the highest option) and `name` is a lower-case string (the move categories name) where spaces are replaced with `-`
+
+#### Examples
+The following Python code retrieves JSON data for the move category called 'swagger' (the id for swagger is 5) and stores it into a dictionary with the following keys:
+
+- `id`: the integer id of the move category
+- `name`: the move category's name (as a string)
+- `moves`: a list of moves assigned to this category
+- `descriptions`: descriptions of this category in different languages
+
+<br>
+
+```python
+import requests, json
+
+# fetch the api data for the swagger move category and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/move-category/5"
+swagger_data = requests.get(api_url).json()
+
+for key in swagger_data:
+    print("key:", key, "\n", "value:", swagger_data[key], "\n")
+```
+
+This additional code prints the moves grouped together in the swagger move category:
+
+```python
+for move in swagger_data["moves"]:
+    print(move["name"])
+```
 
 
 ### Move Damage Class
