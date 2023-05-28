@@ -6,7 +6,7 @@ title: API Docs
 
 # About this documentation
 
-This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.
+This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.  
 
 <br>
 
@@ -16,10 +16,7 @@ The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon
 
 # Introduction
 
-This documentation provides Python developers with references and tutorials to utilize [PokéAPI](https://pokeapi.co/).
-
-<br>
-
+This documentation provides Python developers with references and tutorials to utilize [PokéAPI](https://pokeapi.co/).  
 If you are reading this documentation, we assume you know what Pokémon is, have at least a basic understanding of Python, and know how RESTful API works.
 
 <br>
@@ -128,7 +125,7 @@ The purpose of this section is to provide details on how to download and install
 
 # How to use the PokéAPI site
 
-**Disclaimer:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
+**Note:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
 
 The PokéAPI site allows users to generate Pokémon attributes by typing in the name of a Pokémon. The resource for the Pokemon entered displays attributes from the API pull request. Below are example instructions of how to display Pikachu's traits. To perform the actions below, visit the [PokéAPI](https://pokeapi.co/) site.
 
