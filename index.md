@@ -242,7 +242,7 @@ where id is an integer representing the move's `id` (`1` as the lowest option) a
 
 The following Python code retrieves JSON data for the move called 'bubble' (the id for bubble is 145) and stores it into a dictionary with the following keys:
 
-| Name  | <div style="width:50%;">Description</div> | Type |
+| Name  | <span style="display: inline-block; width:50%;">Description</span> | Type |
 | ----- | -------------------- | ---- |
 | `id` | the move's id | integer |
 | `name` | the move's name | string |
