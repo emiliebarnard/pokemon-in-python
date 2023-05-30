@@ -66,16 +66,14 @@ The purpose of this section is to provide details on how to download and install
 
 **Disclaimer:** The instructions provided within this section will work for both Microsoft Windows, Mac, and Linux users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
 
-<br>
+## Requirements
 
-**Visual Studio Code Requirements**
+### Visual Studio Code requirements
 * **Hardware:** 1.6GHZ or faster processor (recommended)
 * **System OS:** Microsoft Windows 10 and 11 (32-bit and 64-bit), macOS X (High Sierra 10.13+), Linux (Debian): Ubuntu Desktop 16.04, Debian 9, & Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 34
 * [System requirements documentation](https://code.visualstudio.com/docs/supporting/requirements)
 
-<br>
-
-**Python Requirements**
+### Python requirements
 * **Hardware:** 8GB RAM or higher (recommended)
 * **Software:** Latest Python version 3.11.3 release - Microsoft Windows 10 or 11 and macOS 13 or higher, & Linux (pre-installed) for most systems.
 * Python version releases for [Microsoft Windows](https://www.python.org/downloads/windows/), [macOS](https://www.python.org/downloads/macos/), and [Linux](https://www.python.org/downloads/source/)
@@ -83,7 +81,7 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-## Download and install Visual Studio Code and Python software
+## Download and install software
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image.png)
@@ -123,7 +121,7 @@ The purpose of this section is to provide details on how to download and install
 
 ---
 
-# How to use the PokéAPI site
+# Using the PokéAPI site
 
 **Note:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
 
@@ -137,15 +135,15 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 
 ---
 
-# Core Python Interactions
+# Core Python interactions
 
 ## Evolution
 
-### Evolution Chains
+### Evolution chains
 
 Many Pokémon have an evolution attribute that transforms into a new type of Pokémon  from their family tree. A Pokémon’s new form consists of new abilities and can often turn the tide in battle.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/evolution-chain/{id}/` 
 
@@ -184,12 +182,12 @@ for key in evolution_chain_data:
 
 <br>
 
-### Evolution Triggers
+### Evolution triggers
 
 Pokémon transformations occur when a condition is met to where the Pokémon changes into a specific type or form.  
 For more details on evolution methods that trigger transformations, please refer to [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution).
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/evolution-trigger/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
@@ -233,7 +231,7 @@ for key in evolution_trigger_data:
 Pokémon have an assortment of skills and can range from class type to specific conditions to initiate. This section will provide a list of various move types to try in Python. 
 Pokémon use *moves* in battle. Some moves are used outside of battle, but only in specific situations related to exploring new areas. 
 
-### API Path
+### API path
 
 `https://pokeapi.co/api/v2/move/{id or name}/`  
 where id is an integer representing the move's `id` (`1` as the lowest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
@@ -297,7 +295,7 @@ for pokemon in bubble_data["learned_by_pokemon"]:
 
 *Move ailments* are status conditions caused by moves.   
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-ailment/{id or name}/`  
 where `id` is an integer representing the move ailment's id (`1` as the lowest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
@@ -341,7 +339,7 @@ Pokémon moves have one of three different *move battle styles*. The three style
 - Defense
 - Support 
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-battle-style/{id or name}/`  
 where `id` is an integer representing the move battle style id (`1` as the lowest option and `3` as the highest option) and `name` is a lower-case string (the move battle style name) where spaces are replaced with `-`
@@ -381,7 +379,7 @@ for language in attack_data["names"]:
 
 General *move categories* grouping similar move effects together. 
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-category/{id or name}/`  
 where `id` is an integer representing the move categories id (`0` as the lowest option and `13` as the highest option) and `name` is a lower-case string (the move categories name) where spaces are replaced with `-`
@@ -422,7 +420,7 @@ for move in swagger_data["moves"]:
 
 Certain types of Pokémon have a variety of moves that are special skills to be used against other opponents where these specialzed Pokémon are associated with a damage class.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-damage-class/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
@@ -467,7 +465,7 @@ for key in move_damage_class:
 
 Pokémon that learn moves from certain methods whether it is from leveling or otherwise. This section focuses on how to identify these types of Pokémon.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-learn-method/{id or name}/`
 
@@ -512,7 +510,7 @@ for key in move_learn_method:
 
 An ability to lock on to a Pokémon, environments, or other targetable attributes. This section will focus on how to identify these types of move targets. 
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/move-target/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
@@ -559,7 +557,7 @@ for key in move_target:
 
 An <i>ability</i> is a game mechanic that grants a passive effect for a Pokémon in battle or while navigating the world. A single Pokémon may have multiple abilities but only one active ability at a given time. More information can be found on <a href="https://bulbapedia.bulbagarden.net/wiki/Ability">Bulbapedia</a>.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/ability/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -623,7 +621,7 @@ The *characteristic* of a Pokémon is determined by which stat holds the highest
 
 Further, each stat has 5 options for the *characteristic* phrase applied. The modulo 5 of the IV determines which of the 5 to use.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/characteristic/{id}`  
 where `id` is an integer (`1` as the lowest option)
@@ -682,7 +680,7 @@ for characteristic in attack_data["characteristics"]:
 
 A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are compatible for breeding.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/egg-group/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of *Egg Group*
@@ -722,7 +720,7 @@ for pokemon in dragon_data["pokemon_species"]:
 
 Most Pokémon have a *gender*, either male or female, though some species do not. *Genders* impact breeding compatibility and sometimes the appearance of a Pokémon.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/gender/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *gender*
@@ -771,7 +769,7 @@ A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The
 - slow
 - fluctuating
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/growth-rate/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *growth rate*
@@ -813,7 +811,7 @@ for pokemon in erratic_data["pokemon_species"]:
 
 A Pokémon's *Nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/nature/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *nature*
@@ -867,7 +865,7 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 - stamina
 - jump
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokeathlon-stat/{id or name}`
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
@@ -914,7 +912,7 @@ for nature in jump_data["affecting_natures"]["decrease"]:
 
 Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokemon/{id or name}/encounters`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`
@@ -952,7 +950,7 @@ This additional code displays only the `name` of the location(s) in which player
 
 Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted into a color group determined by the color covering most of their body. **Note**: Orange is not a color option. Orange Pokémon are listed as red or brown.  
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokemon-color/`  
 returns all Pokémon colors. To return results from a specific color use:
@@ -999,7 +997,7 @@ for pokemon in color_2_data["pokemon_species"]:
 
 Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pokémon that vary more than just visually are listed as different Pokémon entities. 
 
-#### API Path
+#### API path
 `https://pokeapi.co/api/v2/pokemon-form/{id or name}/`  
 where `id` is an integer representing the  Pokémon's id (`1` as the lowest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
 
@@ -1074,7 +1072,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 - Urban
 - Waters-edge
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -1110,7 +1108,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 
 ---
 
-### Pokémon Shapes
+### Pokémon shapes
 *Pokémon Shape* is used for sorting Pokémon in a Pokédex. There are 14 shapes:  
 - Ball
 - Squiggle
@@ -1127,7 +1125,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 - Bug-wings
 - Armor
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -1164,11 +1162,11 @@ for pokemon_species in ball_data["pokemon_species"]:
 
 ---
     
-### Pokémon Species
+### Pokémon species
 
 A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/pokemon-species/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -1242,7 +1240,7 @@ for genus in butterfree_data["genera"]:
 
 <i>Stats</i> determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/stat/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -1296,7 +1294,7 @@ for increase in attack_data["affecting_natures"]["increase"]:
 
 <i>Types</i> are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
 
-#### API Path
+#### API path
 
 `https://pokeapi.co/api/v2/type/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
@@ -1347,7 +1345,7 @@ for double_damage_to in ghost_data["damage_relations"]["double_damage_to"]:
 
 ---
 
-# More Python Sample Code
+# More Python sample code
 
 ## Create Pokédex
 
@@ -1371,7 +1369,7 @@ for pokemon in pokemon_json["results"]:
 
 ---
 
-## Search Pokémon by Filters
+## Search Pokémon by filters
 
 There are various ways to search for Pokémon by filters. Please refer to the example code in the following sections:  
 - [Abilities](#abilities)
@@ -1380,7 +1378,7 @@ There are various ways to search for Pokémon by filters. Please refer to the ex
 
 ---
 
-## Display Pokémon Image
+## Display Pokémon image
 
 To display images in Python, install one more library named *Pillow*. To do this, type `pip install pillow` in your Terminal (just like `pip install requests` as explained in [Getting Started](getting-started)).
 
@@ -1426,3 +1424,5 @@ def show_image(pokemon):
 
 show_image("Skitty")
 ```
+
+# Resources
