@@ -18,6 +18,9 @@ list-style-type: none;
 .inner-drop {
 padding-left: 30px;
 }
+details > summary {
+margin-left: -15px;
+}
   </style>
    <b>Site Navigation</b>
    <ul>
@@ -92,6 +95,16 @@ padding-left: 30px;
            <li><a href="#search-pokémon-by-filters">Search Pokémon by filters</a></li>
            <li><a href="#display-pokémon-image">Display Pokémon image</a></li>
           </ul>
-       <li><a href="#resources">Resources</a></li>
+       <li><a href="#resources">Resources
+       <ul class="nobull">
+         <li><details><summary><a href="#common-errors">Common errors</a></summary>
+               <ul class="inner-drop">
+                 <li><a href="#api-error">API error</a></li>
+                 <li><a href="#python-errors">Python errors</a></li></ul>
+       </li>
+       </ul>
+       <ul>
+                <li><a href="#links">Links</a></li>
+       </ul>
    </ul>
  </div>

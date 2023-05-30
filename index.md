@@ -1426,3 +1426,12 @@ show_image("Skitty")
 ```
 
 # Resources
+
+## Common errors
+
+### API errors
+
+### Python errors
+
+## Links
+
