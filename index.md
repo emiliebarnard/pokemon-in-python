@@ -864,6 +864,7 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 - skill
 - stamina
 - jump
+<br>
 
 #### API path
 
