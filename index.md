@@ -1071,6 +1071,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 - Sea
 - Urban
 - Waters-edge
+<br>
 
 #### API path
 
@@ -1124,6 +1125,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 - Humanoid
 - Bug-wings
 - Armor
+<br>
 
 #### API path
 
