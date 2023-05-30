@@ -149,7 +149,7 @@ Many Pokémon have an evolution attribute that transforms into a new type of Po
 
 `https://pokeapi.co/api/v2/evolution-chain/{id}/` 
 
-id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `20` as the highest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 
@@ -192,7 +192,7 @@ For more details on evolution methods that trigger transformations, please refer
 #### API path
 
 `https://pokeapi.co/api/v2/evolution-trigger/{id or name}/`  
-id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `13` as the highest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 
@@ -236,7 +236,7 @@ Pokémon use *moves* in battle. Some moves are used outside of battle, but only 
 ### API path
 
 `https://pokeapi.co/api/v2/move/{id or name}/`  
-where id is an integer representing the move's `id` (`1` as the lowest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
+where id is an integer representing the move's `id` (`1` as the lowest option and `920` as the highest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
 
 #### Examples
 
@@ -300,7 +300,7 @@ for pokemon in bubble_data["learned_by_pokemon"]:
 #### API path
 
 `https://pokeapi.co/api/v2/move-ailment/{id or name}/`  
-where `id` is an integer representing the move ailment's id (`1` as the lowest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
+where `id` is an integer representing the move ailment's id (`1` as the lowest option and `22` as the highest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
 
 #### Examples
 
@@ -425,7 +425,7 @@ Certain types of Pokémon have a variety of moves that are special skills to be
 #### API path
 
 `https://pokeapi.co/api/v2/move-damage-class/{id or name}/`  
-id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `3` as the highest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 
@@ -471,7 +471,7 @@ Pokémon that learn moves from certain methods whether it is from leveling or o
 
 `https://pokeapi.co/api/v2/move-learn-method/{id or name}/`
 
-id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `11` as the highest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 
@@ -515,7 +515,7 @@ An ability to lock on to a Pokémon, environments, or other targetable attribut
 #### API path
 
 `https://pokeapi.co/api/v2/move-target/{id or name}/`  
-id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `16` as the highest option) of which we’ll use the id number for an example Pokémon.
 
 #### Examples
 
@@ -562,7 +562,7 @@ An <i>ability</i> is a game mechanic that grants a passive effect for a Pokémon
 #### API path
 
 `https://pokeapi.co/api/v2/ability/{id or name}/`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `358` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 
@@ -626,7 +626,7 @@ Further, each stat has 5 options for the *characteristic* phrase applied. The mo
 #### API path
 
 `https://pokeapi.co/api/v2/characteristic/{id}`  
-where `id` is an integer (`1` as the lowest option)
+where `id` is an integer (`1` as the lowest option and `30` as the highest option)
 
 #### Examples
 
@@ -685,7 +685,7 @@ A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are
 #### API path
 
 `https://pokeapi.co/api/v2/egg-group/{id or name}`  
-where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of *Egg Group*
+where `id` is an integer (`1` as the lowest option and `15`as the highest option) and `name` is a string referring to the name of *Egg Group*
 
 #### Examples
 
@@ -725,7 +725,7 @@ Most Pokémon have a *gender*, either male or female, though some species do not
 #### API path
 
 `https://pokeapi.co/api/v2/gender/{id or name}`  
-where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *gender*
+where `id` is an integer (`1` as the lowest option and `3` as the highest option) and `name` is a string referring to the name of the *gender*
 
 #### Examples
 
@@ -774,7 +774,7 @@ A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The
 #### API path
 
 `https://pokeapi.co/api/v2/growth-rate/{id or name}`  
-where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *growth rate*
+where `id` is an integer (`1` as the lowest option and `6` as the highest option) and `name` is a string referring to the name of the *growth rate*
 
 #### Examples
 
@@ -816,7 +816,7 @@ A Pokémon's *Nature* defines how they behave, what flavors it likes and dislike
 #### API path
 
 `https://pokeapi.co/api/v2/nature/{id or name}`  
-where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *nature*
+where `id` is an integer (`1` as the lowest option and `25` as the highest option) and `name` is a string referring to the name of the *nature*
 
 #### Examples
 
@@ -871,7 +871,7 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 #### API path
 
 `https://pokeapi.co/api/v2/pokeathlon-stat/{id or name}`
-where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
+where `id` is an integer (`1` as the lowest option and `5` as the highest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
 
 #### Examples
 
@@ -959,7 +959,7 @@ Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted into a col
 returns all Pokémon colors. To return results from a specific color use:
 
 `https://pokeapi.co/api/v2/pokemon-color/{id or name}/`  
-where `id` is an integer representing the color's id (`1` as the lowest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
+where `id` is an integer representing the color's id (`1` as the lowest option and `10` as the highest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
 
 #### Examples
 The following Python code retrieves JSON data for the color *blue* (the id for blue is 2) and stores it into a dictionary with the following keys:
@@ -1002,7 +1002,7 @@ Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pok
 
 #### API path
 `https://pokeapi.co/api/v2/pokemon-form/{id or name}/`  
-where `id` is an integer representing the  Pokémon's id (`1` as the lowest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
+where `id` is an integer representing the  Pokémon's id (`1` as the lowest option and `1450` as the highest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
 
 #### Examples
 
@@ -1079,7 +1079,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 #### API path
 
 `https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `9` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 
@@ -1133,7 +1133,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 #### API path
 
 `https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `14` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 
@@ -1174,7 +1174,7 @@ A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes 
 #### API path
 
 `https://pokeapi.co/api/v2/pokemon-species/{id or name}`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `1010` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 The following Python code retrieves JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:  
@@ -1248,7 +1248,7 @@ for genus in butterfree_data["genera"]:
 #### API path
 
 `https://pokeapi.co/api/v2/stat/{id or name}/`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `8` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 
@@ -1302,7 +1302,7 @@ for increase in attack_data["affecting_natures"]["increase"]:
 #### API path
 
 `https://pokeapi.co/api/v2/type/{id or name}/`  
-where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
+where `id` is an integer (`1` as the lowest option and `20` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
 
