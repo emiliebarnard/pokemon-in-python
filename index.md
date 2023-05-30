@@ -153,10 +153,13 @@ id is the integer (`1` as the lowest option and `20` as the highest option) of w
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon Magikarp (`id` = `64`) and stores it into a dictionary with the following keys:  
-- `id`: the number associated with the Pokémon as an identifier.
-- `baby_trigger_item`: the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form.
-- `chain`: the base link to indicate all evolution details of the identified Pokémon and showcase evolution order.
+The following Python code retrieves JSON data for the Pokémon Magikarp (`id` = `64`) and stores it into a dictionary with the following keys: 
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the Pokémon as an identifier | integer |
+| `baby_trigger_item` | the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form | NamedAPIResource(Item) object |
+| `chain` | the base link to indicate all evolution details of the identified Pokémon and showcase evolution order | ChainLink object |
 
 <br>
 
@@ -196,11 +199,14 @@ id is the integer (`1` as the lowest option and `13` as the highest option) of w
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys:  
-- `id`: the number associated with the Pokémon as an identifier.
-- `name`: the name of the Pokémon identified.
-- `names`: the name of the Pokémon  identified used for multiple languages.
-- `pokémon_species`: a comprehensive list of Pokémon types associated with evolutions.
+The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys: 
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the Pokémon as an identifier | integer |
+| `name` | the name of the Pokémon identified | string |
+| `names` | the name of the Pokémon  identified used for multiple languages | list |
+| `pokémon_species` | a comprehensive list of Pokémon types associated with evolutions | list |
 
 <br>
 
@@ -300,16 +306,20 @@ for pokemon in bubble_data["learned_by_pokemon"]:
 
 #### API path
 
-`https://pokeapi.co/api/v2/move-ailment/{id or name}/`  
+`https://pokeapi.co/api/v2/move-ailment/{id or name}/`
+
 where `id` is an integer representing the move ailment's id (`0` as the lowest option and `22` as the highest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
 
 #### Examples
 
 The following Python code retrieves JSON data for the move ailment called 'sleep' (the id for sleep is 2) and stores it into a dictionary with the following keys:  
-- `id`: the integer id of the move ailment 
-- `name`: the move ailment's name (as a string)
-- `moves`: a list of moves that cause this ailment 
-- `names`: a list of names for this move ailment in different languages 
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the id of the move ailment | integer |
+| `name` | the move ailment's name | string |
+| `moves` | a list of moves that cause this ailment | list |
+| `names` | a list of names for this move ailment in different languages | list |
 
 <br>
 
@@ -351,9 +361,12 @@ where `id` is an integer representing the move battle style id (`1` as the lowes
 #### Examples
 
 The following Python code retrieves JSON data for the move battle style called 'attack' (the id for attack is 1) and stores it into a dictionary with the following keys:  
-- `id`: the integer id of the move battle style
-- `name`: the move battle style's name (as a string)
-- `names`: a list of names for this move battle style in different languages
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the id of the move battle style | integer |
+| `name` | the move battle style's name | string |
+| `names` | a list of names for this move battle style in different languages | list |
  
 <br>
 
@@ -392,10 +405,13 @@ where `id` is an integer representing the move categories id (`0` as the lowest 
 #### Examples
 
 The following Python code retrieves JSON data for the move category called 'swagger' (the id for swagger is 5) and stores it into a dictionary with the following keys:  
-- `id`: the integer id of the move category
-- `name`: the move category's name (as a string)
-- `moves`: a list of moves assigned to this category
-- `descriptions`: descriptions of this category in different languages
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the id of the move category | integer |
+| `name` | the move category's name | string |
+| `moves` | a list of moves assigned to this category | list |
+| `descriptions` | descriptions of this category in different languages | list |
 
 <br>
 
@@ -435,11 +451,13 @@ id is the integer (`1` as the lowest option and `3` as the highest option) of wh
 
 The following Python code retrieves JSON data for the Pokémon move damage class `special` (`id` = `3`) and stores it into a dictionary with the following keys:
 
-- `id`: the number associated with the Pokémon as an identifier.
-- `name`: the name of the Pokémon identified.
-- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
-- `moves`: a list of abilities associated with damage class Pokémon.
-- `names`: the name of the Pokémon  identified used for multiple languages.
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the Pokémon as an identifier | integer |
+| `name` | the name of the Pokémon identified | string |
+| `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
+| `moves` | a list of abilities associated with damage class Pokémon | list |
+| `names` | the name of the Pokémon  identified used for multiple languages | list |
 
 <br>
 
@@ -480,11 +498,14 @@ id is the integer (`1` as the lowest option and `11` as the highest option) of w
 #### Examples
 
 The following Python code retrieves JSON data for the Pokémon move learn method `form change` (`id` = `9`) and stores it into a dictionary with the following keys:  
-- `id`: the number associated with the Pokémon as an identifier.
-- `name`: the name of the Pokémon identified.
-- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
-- `names`: the name of the Pokémon  identified used for multiple languages.
-- `version_groups`: a list showing the different types of Pokémon that learn moves from specific groups.
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the Pokémon as an identifier | integer |
+| `name` | the name of the Pokémon identified | string |
+| `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
+| `names` | the name of the Pokémon  identified used for multiple languages | list |
+| `version_groups` | a list showing the different types of Pokémon that learn moves from specific groups | list |
 
 <br>
 
@@ -526,11 +547,13 @@ id is the integer (`1` as the lowest option and `16` as the highest option) of w
 
 The following Python code retrieves JSON data for the Pokémon move target `fainting Pokémon`  (`id` = `16`) and stores it into a dictionary with the following keys:
 
-- `id`: the number associated with the Pokémon as an identifier.
-- `name`: the name of the Pokémon identified.
-- `descriptions`: the displayed information of a Pokémon  used in multiple languages.
-- `moves`: a list of abilities associated with damage class Pokémon.
-- `names`: the name of the Pokémon  identified used for multiple languages.
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the Pokémon as an identifier | integer |
+| `name` | the name of the Pokémon identified | string |
+| `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
+| `moves` | a list of abilities associated with damage class Pokémon | list |
+| `names` | the name of the Pokémon  identified used for multiple languages | list |
 
 <br>
 
@@ -572,16 +595,19 @@ where `id` is an integer (`1` as the lowest option and `358` as the highest opti
 
 #### Examples
 
-The following Python code retrieves JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys:  
-- `effect_changes`: a list of historical effects this ability in previous versions and in different languages
-- `effect_entries`: a list of the current effect this this ability in different languages
-- `flavor_text_entries`: a list of the flavor text, or short text often displayed in images, of this ability in different languages
-- `generation`: the Pokémon generation in which this ability first appeared
-- `id`: an integer (`1` as the lowest option) unique to this ability
-- `is_main_series`: a boolean to flag whether or not this ability first appeared in the main series of the games
-- `name`: a string representing this ability's name
-- `names`: a list of names for this ability in different languages
-- `pokemon`: a list of Pokémon that may have this ability
+The following Python code retrieves JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys: 
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `effect_changes` | a list of historical effects this ability in previous versions and in different languages | list |
+| `effect_entries` | a list of the current effect this this ability in different languages | list |
+| `flavor_text_entries` | a list of the flavor text, or short text often displayed in images, of this ability in different languages | list |
+| `generation` | the Pokémon generation in which this ability first appeared | 	NamedAPIResource(Generation) object |
+| `id` | an integer (`1` as the lowest option) unique to this ability | integer |
+| `is_main_series` | a boolean to flag whether or not this ability first appeared in the main series of the games | boolean |
+| `name` | a string representing this ability's name | string |
+| `names` | a list of names for this ability in different languages | list |
+| `pokemon` | a list of Pokémon that may have this ability | list |
 
 <br>
 
@@ -638,11 +664,14 @@ where `id` is an integer (`1` as the lowest option and `30` as the highest optio
 #### Examples
 
 The following Python code retrieves JSON data for the characteristic *Highly curious* and stores it into a dictionary with the following keys:  
-- `descriptions`: a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. 
-- `gene_modulo`: an inteeger between 0 and 4 (inclusive) which is the remainder of the highest IV divided by 5 (modulo 5)
-- `highest_stat`: a dictionary with two keys, name and url, both of which are string values that refer to the IV associated with this characteristic
-- `id`: an integer (`1` as the lowest option) unique to this characteristic
-- `possible_values`: a list of integers that represent the possible values of the highest IV of a Pokémon with this characteristic
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `descriptions` | a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. | list | 
+| `gene_modulo` | an inteeger between 0 and 4 (inclusive) which is the remainder of the highest IV divided by 5 (modulo 5) | integer |
+| `highest_stat` | a dictionary with two keys, name and url, both of which are string values that refer to the IV associated with this characteristic | object |
+| `id` | an integer (`1` as the lowest option) unique to this characteristic | integer |
+| `possible_values` | a list of integers that represent the possible values of the highest IV of a Pokémon with this characteristic | integer |
 
 <br>
 
@@ -698,10 +727,13 @@ where `id` is an integer (`1` as the lowest option and `15`as the highest option
 #### Examples
 
 The following Python code retrieves JSON data for the Egg Group *Dragon* and stores it into a dictionary with the following keys:  
-- `id`: an integer (starting with 1) that acts as the identifier for the Egg Group
-- `name`: the name of the Egg Group (in English)
-- `names`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, name and url. These keys refer to the name and url of the language used to express the Egg Group name.
-- `pokemon_species`: a list of dictionaries with two keys, name and url. These reference all the Pokémon in the Egg Group.
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | an integer (starting with 1) that acts as the identifier for the Egg Group | integer |
+| `name` | the name of the Egg Group (in English) | string |
+| `names` | a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, name and url. These keys refer to the name and url of the language used to express the Egg Group name. | list |
+| `pokemon_species` | a list of dictionaries with two keys, name and url. These reference all the Pokémon in the Egg Group. | list |
 
 ```python
 import requests, json
@@ -739,10 +771,13 @@ where `id` is an integer (`1` as the lowest option and `3` as the highest option
 #### Examples
 
 The following Python code retrieves JSON data for the Gender *female* and stores it into a dictionary with the following keys:
-- `id`: an integer (starting with 1) that acts as the identifier for the Gender
-- `name`: the name of the Gender (in English)
-- `pokemon_species_details`: a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, rate and pokemon_species. rate refers to the likelihood of a Pokémon species being this gender, out of ?. pokemon_species is a dictionary with keys name and url, both referring to the Pokémon that can be this gender.
-- `required_for_evolution`: a list of dictionaries with two keys, name and url. These reference all the Pokémon that require a previous Pokémon to be this specific gender in order to evolve into them.
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | an integer (starting with 1) that acts as the identifier for the Gender | integer |
+| `name` | the name of the Gender (in English) | string |
+| `pokemon_species_details` | a list of dictionaries with two keys, name and language. The value of name is a string, and the value of language is a dictionary with two keys, rate and pokemon_species. rate refers to the likelihood of a Pokémon species being this gender, out of ?. pokemon_species is a dictionary with keys name and url, both referring to the Pokémon that can be this gender. | list |
+| `required_for_evolution` | a list of dictionaries with two keys, name and url. These reference all the Pokémon that require a previous Pokémon to be this specific gender in order to evolve into them. | list |
 
 ```python
 import requests, json
@@ -790,12 +825,15 @@ where `id` is an integer (`1` as the lowest option and `6` as the highest option
 #### Examples
 
 The following Python code retrieves JSON data for the growth rate *erratic* and stores it into a dictionary with the following keys:
-- `id`: an integer (starting with 1) that acts as the identifier for the Gender
-- `name`: a string, the name of the growth rate (in English)
-- `formula`: a string that represents the mathematical formula used to calculate the rate at which a Pokémon levels up, based on current level and the specific growth rate
-- `descriptions`: a list of dictionaries with keys description and language. language is also a dictionary with keys name and url. This is a list of the descriptions of the growth rate in various languages.
-- `levels`: a list of dictionaries with keys level and experience. This indicates how much experience is needed to level up based on the current level and growth rate.
-- `pokemon_species`: a list of dictionaries with keys name and url. This is a list of all Pokémon that level up at this growth rate.
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | an integer (starting with 1) that acts as the identifier for the growth rate | integer |
+| `name` | a string, the name of the growth rate (in English) | string |
+| `formula` | a string that represents the mathematical formula used to calculate the rate at which a Pokémon levels up, based on current level and the specific growth rate | string |
+| `descriptions` | a list of dictionaries with keys description and language. language is also a dictionary with keys name and url. This is a list of the descriptions of the growth rate in various languages. | list |
+| `levels` | a list of dictionaries with keys level and experience. This indicates how much experience is needed to level up based on the current level and growth rate. | list |
+| `pokemon_species` | a list of dictionaries with keys name and url. This is a list of all Pokémon that level up at this growth rate. | list |
 
 ```python
 import requests, json
@@ -833,15 +871,18 @@ where `id` is an integer (`1` as the lowest option and `25` as the highest optio
 #### Examples
 
 The following Python code retrieves JSON data for the nature *sassy* and stores it into a dictionary with the following keys:
-- `decreased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature
-- `hates_flavor`: a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature
-- `id`: an integer (starting with 1) that acts as the identifier for the Nature
-- `increased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is increased by 10% due to this nature
-- `likes_flavor`: a dictionary with two keys, name and url, that identifies the the flavor liked by Pokémon with this nature
-- `move_battle_style_preferences`: a list of dictionaries with three keys, low_hp_preference, high_hp_preference, and move_battle_style. move_battle_stype is a dictionary with two keys, name and url. low_hp_preference and high_hp_preference are integers that refer to how likely a Pokémon with this nature is to use a particular move battle style.
-- `name`: a string, the name of the Nature (in English)
-- `names`: a list of names for this nature in different languages
-- `pokeathlon_stat_changes`: a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted. See (Pokéatholon Stats)[#pokéatholon-stats] for more information.
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `decreased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature | NamedAPIResource(Stat) object |
+| `hates_flavor` | a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature | NamedAPIResource(BerryFlavor) object |
+| `id` | an integer (starting with 1) that acts as the identifier for the Nature | integer |
+| `increased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is increased by 10% due to this nature | NamedAPIResource(Stat) object |
+| `likes_flavor` | a dictionary with two keys, name and url, that identifies the the flavor liked by Pokémon with this nature | NamedAPIResource(BerryFlavor) object |
+| `move_battle_style_preferences` | a list of dictionaries with three keys, low_hp_preference, high_hp_preference, and move_battle_style. move_battle_stype is a dictionary with two keys, name and url. low_hp_preference and high_hp_preference are integers that refer to how likely a Pokémon with this nature is to use a particular move battle style. | list |
+| `name` | a string, the name of the Nature (in English) | string |
+| `names` | a list of names for this nature in different languages | list |
+| `pokeathlon_stat_changes` | a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted. See (Pokéatholon Stats)[#pokéatholon-stats] for more information. | list |
 
 ```python
 import requests
@@ -889,10 +930,13 @@ where `id` is an integer (`1` as the lowest option and `5` as the highest option
 #### Examples
 
 The following Python code retreives JSON data for the Pokéatholon Stat *jump* and stores it into a dictionary with the following keys:
-- `affecting_natures`: a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impacted. See (Natures)[#natures] for more information.
-- `id`: an integer (starting with 1) that acts as the identifier for the stat
-- `name`: a string, the name of the stat (in English)
-- `names`: a list of names for this skill in different languages
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `affecting_natures` | a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impacted. See (Natures)[#natures] for more information. | NaturePokeathlonStatAffectSets object |
+| `id` | an integer (starting with 1) that acts as the identifier for the stat | integer |
+| `name` | a string, the name of the stat (in English) | string |
+| `names` | a list of names for this skill in different languages | list |
 
 ```python
 import requests
@@ -936,9 +980,12 @@ where `id` is an integer (`1` as the lowest option) and `name` is a lower-case s
 
 #### Examples
 
-The following Python code retrieves JSON data for the location areas of the Pokémon Rhydon (this Pokémon's id is 1) and stores it into a dictionary with the following keys:  
-- `location_area`: the name of the location and the API url for that location
-- `version_details`: a list of encounters, chances, and versions related to the specified Pokémon
+The following Python code retrieves JSON data for the location areas of the Pokémon Rhydon (this Pokémon's id is 1) and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `location_area` | the name of the location and the API url for that location | NamedAPIResource(LocationArea) object |
+| `version_details` | a list of encounters, chances, and versions related to the specified Pokémon | list |
 
 ```python
 import requests, json
@@ -978,10 +1025,13 @@ where `id` is an integer representing the color's id (`1` as the lowest option a
 
 #### Examples
 The following Python code retrieves JSON data for the color *blue* (the id for blue is 2) and stores it into a dictionary with the following keys:
-- `id`: the integer id of the color
-- `name`: the color's name (as a string)
-- `names`: a list of the color's name in different languages
-- `pokemon_species`: a list of Pokémon in this color group
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the id of the color | integer |
+| `name` | the color's name | string |
+| `names` | a list of the color's name in different languages | list |
+| `pokemon_species` | a list of Pokémon in this color group | list |
 
 ```python
 import requests, json
@@ -1022,21 +1072,24 @@ where `id` is an integer representing the  Pokémon's id (`1` as the lowest opti
 
 #### Examples
 
-The following Python code retrieves JSON data for the West form of  the Pokémon 'Shellos' (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys:  
-- `id`: the Pokémon's id (as an integer) 
-- `name`: the Pokémon's name (as a string)
-- `order`: an integer that indicates where in the list of all Pokémon forms the Pokémon form you are looking for is located
-- `form_order`: the order this Pokémon form appears relative to other Pokémon of the same species
-- `is_default`: set to 'true' for only one Pokémon can be set to default within a species 
-- `is_battle_only`: a boolean indicating if the form can only happen in battle
-- `is_mega`: a boolean indicating if the form is a mega form or not
-- `form_name`: the name of the form (as a string)
-- `pokemon`: the Pokémon that can take this form including their API path
-- `types`: a list of the types this Pokémon form has
-- `sprites`: URL links to the sprites used to represent this Pokémon form
-- `version_group`: the version name and API path for the version group this Pokémon form was introduced in 
-- `names`: a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist)
-- `form_names`: a list of the specific form names for this Pokemon form in different languages  (this is empty if no specific names exist)
+The following Python code retrieves JSON data for the West form of  the Pokémon 'Shellos' (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys: 
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the Pokémon's id | integer |
+| `name` | the Pokémon's name | string |
+| `order` | indicates where in the list of all Pokémon forms the Pokémon form you are looking for is located | integer |
+| `form_order` | the order this Pokémon form appears relative to other Pokémon of the same species | integer |
+| `is_default` | set to 'true' for only one Pokémon can be set to default within a species | boolean | 
+| `is_battle_only` | indicates if the form can only happen in battle | boolean |
+| `is_mega`|  indicates if the form is a mega form or not | boolean |
+| `form_name` | the name of the form | string |
+| `pokemon` | the Pokémon that can take this form including their API path | NamedAPIResource(Pokemon) object |
+| `types` | a list of the types this Pokémon form has | list |
+| `sprites` | URL links to the sprites used to represent this Pokémon form | PokemonFormSprites object |
+| `version_group` | the version name and API path for the version group this Pokémon form was introduced in | NamedAPIResource(VersionGroup) object |
+| `names` | a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist) | list |
+| `form_names` | a list of the specific form names for this Pokemon form in different languages  (this is empty if no specific names exist) | list |
 
 ```python
 import requests, json
@@ -1101,10 +1154,13 @@ where `id` is an integer (`1` as the lowest option and `9` as the highest option
 #### Examples
 
 The following Python code retreives JSON data for the shape named *forest* and stores it into a dictionary with the following keys:  
-- `id`: the identifier for this resource
-- `name`: the name for this resource
-- `names`: the name of this resource listed in different languages
-- `pokemon_species`: a list of the Pokémon species that can be found in this habitat
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the identifier for this resource | integer |
+| `name` | the name for this resource | string |
+| `names` | the name of this resource listed in different languages | list |
+| `pokemon_species` | a list of the Pokémon species that can be found in this habitat | list |
 
 <br>
 
@@ -1156,11 +1212,14 @@ where `id` is an integer (`1` as the lowest option and `14` as the highest optio
 #### Examples
 
 The following Python code retreives JSON data for the shape named *ball* and stores it into a dictionary with the following keys:  
-- `awesome_names`: the "scientific" name of this Pokémon shape listed in different languages
-- `id`: the identifier for this resource
-- `name`: the name for this resource
-- `names`: the name of this resource listed in different languages
-- `pokemon_species`: a list of the Pokémon species that have this shape
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `awesome_names` | the "scientific" name of this Pokémon shape listed in different languages | list |
+| `id` | the identifier for this resource | integer |
+| `name` | the name for this resource | string |
+| `names` | the name of this resource listed in different languages | list |
+| `pokemon_species` | a list of the Pokémon species that have this shape | list |
 
 ```python
 import requests, json
@@ -1196,34 +1255,37 @@ A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes 
 where `id` is an integer (`1` as the lowest option and `1010` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
-The following Python code retrieves JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:  
-- `base_happiness`: the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon
-- `capture_rate`: the base capture rate; up to 255. The higher the number, the easier the catch
-- `color`:the color of this Pokémon for Pokédex search
-- `egg_groups`: a list of egg groups this Pokémon species is a member of
-- `evolution_chain`: the evolution chain this Pokémon species is a member of
-- `evolves_from_species`: the Pokémon species that evolves into this Pokemon_species
-- `flavor_text_entries`: a list of flavor text entries for this Pokémon species
-- `form_descriptions`: descriptions of different forms Pokémon take on within the Pokémon species
-- `forms_switchable`: whether or not this Pokémon has multiple forms and can switch between them
-- `gender_rate`: the chance of this Pokémon being female, in eighths; or -1 for genderless
-- `genera`: the genus of this Pokémon species listed in multiple languages
-- `generation`: the generation this Pokémon species was introduced in
-- `growth_rate`: the rate at which this Pokémon species gains levels
-- `habitat`: the habitat this Pokémon species can be encountered in
-- `has_gender_differences`: whether or not this Pokémon has visual gender differences
-- `hatch_counter`: initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's
-- `id`: the identifier for this resource
-- `is_baby`: whether or not this is a baby Pokémon
-- `is_legendary`: whether or not this is a legendary Pokémon
-- `is_mythical`: whether or not this is a mythical Pokémon
-- `name`: the name for this resource
-- `names`: the name of this resource listed in different languages
-- `order`: the order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage
-- `pal_park_encounters`: a list of encounters that can be had with this Pokémon species in pal park
-- `pokedex_numbers`: a list of Pokedexes and the indexes reserved within them for this Pokémon species
-- `shape`: the shape of this Pokémon for Pokédex search
-- `varieties`: a list of the Pokémon that exist within this Pokémon species
+The following Python code retrieves JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `base_happiness` | the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon | integer |
+| `capture_rate` | the base capture rate; up to 255. The higher the number, the easier the catch | integer |
+| `color` | the color of this Pokémon for Pokédex search | NamedAPIResource(PokemonColor) object |
+| `egg_groups` | a list of egg groups this Pokémon species is a member of | list |
+| `evolution_chain` | the evolution chain this Pokémon species is a member of | APIResource(EvolutionChain) object |
+| `evolves_from_species` | the Pokémon species that evolves into this Pokemon_species | NamedAPIResource(PokemonSpecies) object |
+| `flavor_text_entries` | a list of flavor text entries for this Pokémon species | list |
+| `form_descriptions` | descriptions of different forms Pokémon take on within the Pokémon species | list |
+| `forms_switchable` | whether or not this Pokémon has multiple forms and can switch between them | boolean |
+| `gender_rate` | the chance of this Pokémon being female, in eighths; or -1 for genderless | integer |
+| `genera` | the genus of this Pokémon species listed in multiple languages | list |
+| `generation` | the generation this Pokémon species was introduced in | NamedAPIResource(Generation) object |
+| `growth_rate` | the rate at which this Pokémon species gains levels | NamedAPIResource(GrowthRate) object |
+| `habitat` | the habitat this Pokémon species can be encountered in | NamedAPIResource(PokemonHabitat) object |
+| `has_gender_differences` | whether or not this Pokémon has visual gender differences | boolean |
+| `hatch_counter` | initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer |
+| `id` | the identifier for this resource | integer |
+| `is_baby` | whether or not this is a baby Pokémon | boolean |
+| `is_legendary` | whether or not this is a legendary Pokémon | boolean |
+| `is_mythical` | whether or not this is a mythical Pokémon | boolean |
+| `name` | the name for this resource | string |
+| `names` | the name of this resource listed in different languages | list |
+| `order` | the order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage | integer |
+| `pal_park_encounters` | a list of encounters that can be had with this Pokémon species in pal park | list |
+| `pokedex_numbers` | a list of Pokedexes and the indexes reserved within them for this Pokémon species | list |
+| `shape` | the shape of this Pokémon for Pokédex search | NamedAPIResource(PokemonShape) object |
+| `varieties` | a list of the Pokémon that exist within this Pokémon species | list |
 
 ```python
 import requests, json
@@ -1273,15 +1335,18 @@ where `id` is an integer (`1` as the lowest option and `8` as the highest option
 #### Examples
 
 The following Python code retrieves JSON data for the stat named <i>attack</i> and stores it into a dictionary with the following keys:
-- `affecting_moves`: a detail of moves which affect this stat positively or negatively
-- `affecting_natures`: a detail of natures which affect this stat positively or negatively
-- `characteristics`: a list of characteristics that are set on a Pokémon when its highest base stat is this stat
-- `game_index`: id the games use for this stat
-- `id`: the identifier for this resource
-- `is_battle_only`: whether this stat only exists within a battle
-- `move_damage_class`: the class of damage this stat is directly related to
-- `name`: the name for this resource
-- `names`: the name of this resource listed in different languages
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `affecting_moves` | a detail of moves which affect this stat positively or negatively | MoveStatAffectSets object |
+| `affecting_natures` | a detail of natures which affect this stat positively or negatively | NatureStatAffectSets object |
+| `characteristics` | a list of characteristics that are set on a Pokémon when its highest base stat is this stat | list |
+| `game_index` | id the games use for this stat | integer |
+| `id` | the identifier for this resource | integer |
+| `is_battle_only` | whether this stat only exists within a battle | boolean |
+| `move_damage_class` | the class of damage this stat is directly related to | NamedAPIResource(MoveDamageClass) object |
+| `name` | the name for this resource | string |
+| `names` | the name of this resource listed in different languages | list |
 
 ```python
 import requests, json
@@ -1328,16 +1393,19 @@ where `id` is an integer (`1` as the lowest option and `20` as the highest optio
 #### Examples
 
 The following Python code retrieves JSON data for the type named <i>ghost</i> and stores it into a dictionary with the following keys:  
-- `damage_relations`: a detail of how effective this type is toward others and vice versa
-- `game_indices`: a list of game indices relevent to this item by generation
-- `generation`: the generation this type was introduced in.
-- `id`: the identifier for this resource
-- `move_damage_class`: the class of damage inflicted by this type
-- `moves`: a list of moves that have this type
-- `name`: the name for this resource
-- `names`: the name of this resource listed in different languages
-- `past_damage_relations`: a list of details of how effective this type was toward others and vice versa in previous generations
-- `pokemon`: a list of details of Pokémon that have this type
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `damage_relations` | a detail of how effective this type is toward others and vice versa | TypeRelations object |
+| `game_indices` | a list of game indices relevent to this item by generation | list |
+| `generation` | the generation this type was introduced in | NamedAPIResource(Generation) object |
+| `id` | the identifier for this resource | integer |
+| `move_damage_class` | the class of damage inflicted by this type | NamedAPIResource(MoveDamageClass) object |
+| `moves` | a list of moves that have this type | list |
+| `name` | the name for this resource | string |
+| `names` | the name of this resource listed in different languages | list |
+| `past_damage_relations` | a list of details of how effective this type was toward others and vice versa in previous generations | list |
+| `pokemon` | a list of details of Pokémon that have this type | list |
 
 ```python
 import requests, json
