@@ -139,6 +139,126 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 
 # Core Python interactions
 
+## Encounters
+
+### Encounter methods
+
+There are various ways to find wild Pokémon so the player can either battle or catch them to add to their party. A few examples to find a wild Pokémon include walking in tall grass, swimming in the ocean, or cutting down a tree.
+
+#### API path
+
+`https://pokeapi.co/api/v2/encounter-method/{id or name}/`
+
+where id is an integer representing the encounter method id (1 as the lowest option and 31 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+
+##### Examples
+
+The following Python code retrieves JSON data for the encounter method called ‘old-rod’ (the id for old-rod is 2) and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the encounter method as an identifier | integer |
+| `name` | the encounter method's name | string |
+| `order` | a good value for sorting | integer |
+| `names` | a list of names for this encounter method in different languages | list
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/encounter-method/old-rod"
+old_rod_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in old_rod_data:
+    print("key: ", key, "\n", "value:", old_rod_data[key], "\n")
+```
+
+<br>
+
+This additional code returns a list of the encounter method's name in German, English, and French:
+
+```python
+for language in old_rod_data["names"]:
+    print(language["name"])
+```
+
+<br>
+
+### Encounter conditions
+
+Wild Pokémon can be found during specific scenarios. For example they can be found depending on the time, season, or they can be chosen as the player’s starter Pokémon.
+
+#### API path
+`https://pokeapi.co/api/v2/encounter-condition/{id or name}/`
+
+where id is an integer representing the encounter method id (1 as the lowest option and 13 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+
+##### Examples
+
+The following Python code retrieves JSON data for the encounter method called ‘time’ (the id for time is 2) and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the encounter condition as an identifier | integer |
+| `name` | the encounter condition’s name | string |
+| `names` | a list of names for this encounter condition different languages | list |
+| `values` | a list of possible values for this encounter condition | list
+
+```python
+import requests, json
+
+# fetch the api data and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/encounter-condition/time"
+time_data = requests.get(api_url).json()
+
+# display all key-value pairs from the JSON data:
+for key in time_data:
+    print("key: ", key, "\n", "value:", time_data[key], "\n")
+```
+
+<br>
+
+This additional code returns a list of the encounter method’s name in French, German, and English:
+
+```python
+for language in time_data["names"]:
+    print(language["name"])
+```
+
+<br>
+
+### Encounter condition values
+
+This describes the various states an encounter condition can have. An encounter condition can set a Pokémon to be encountered depending on the time, for example, and this value sets the encounter condition to day or night.
+
+#### API path
+
+`https://pokeapi.co/api/v2/encounter-condition-value/{id or name}/`
+where id is an integer representing the encounter method id (1 as the lowest option and 71 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+
+##### Examples
+
+The following Python code retrieves JSON data for the encounter method called ‘time-day’ (the id for time is 4) and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `id` | the number associated with the encounter condition value as an identifier | integer |
+| `name` | the encounter condition value's name | string |
+| `condition` | the condition this encounter condition value is related to | NamedAPIResource (EncounterCondition) object |
+| `names` | a list of names for this encounter condition value different languages | list
+
+<br>
+
+This additional code returns a list of the encounter method’s name in German, English, and French:
+
+```python
+for language in time_day_data["names"]:
+   print(language["name"])
+```
+
+---
+
 ## Evolution
 
 ### Evolution chains
