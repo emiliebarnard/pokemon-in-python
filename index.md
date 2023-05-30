@@ -149,7 +149,7 @@ Many Pokémon have an evolution attribute that transforms into a new type of Po
 
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Pokémon Magikarp (`id` = `64`) and stores it into a dictionary with the following keys:  
 - `id`: the number associated with the Pokémon as an identifier.
@@ -192,7 +192,7 @@ For more details on evolution methods that trigger transformations, please refer
 `https://pokeapi.co/api/v2/evolution-trigger/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys:  
 - `id`: the number associated with the Pokémon as an identifier.
@@ -300,7 +300,7 @@ for pokemon in bubble_data["learned_by_pokemon"]:
 `https://pokeapi.co/api/v2/move-ailment/{id or name}/`  
 where `id` is an integer representing the move ailment's id (`1` as the lowest option) and `name` is a lower-case string (the move ailment's name) where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the move ailment called 'sleep' (the id for sleep is 2) and stores it into a dictionary with the following keys:  
 - `id`: the integer id of the move ailment 
@@ -344,7 +344,7 @@ Pokémon moves have one of three different *move battle styles*. The three style
 `https://pokeapi.co/api/v2/move-battle-style/{id or name}/`  
 where `id` is an integer representing the move battle style id (`1` as the lowest option and `3` as the highest option) and `name` is a lower-case string (the move battle style name) where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the move battle style called 'attack' (the id for attack is 1) and stores it into a dictionary with the following keys:  
 - `id`: the integer id of the move battle style
@@ -384,7 +384,7 @@ General *move categories* grouping similar move effects together.
 `https://pokeapi.co/api/v2/move-category/{id or name}/`  
 where `id` is an integer representing the move categories id (`0` as the lowest option and `13` as the highest option) and `name` is a lower-case string (the move categories name) where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the move category called 'swagger' (the id for swagger is 5) and stores it into a dictionary with the following keys:  
 - `id`: the integer id of the move category
@@ -425,7 +425,7 @@ Certain types of Pokémon have a variety of moves that are special skills to be
 `https://pokeapi.co/api/v2/move-damage-class/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Pokémon move damage class `special` (`id` = `3`) and stores it into a dictionary with the following keys:
 
@@ -461,7 +461,7 @@ for key in move_damage_class:
 
 <br>
 
-### Move learn method
+### Move learn methods
 
 Pokémon that learn moves from certain methods whether it is from leveling or otherwise. This section focuses on how to identify these types of Pokémon.
 
@@ -471,7 +471,7 @@ Pokémon that learn moves from certain methods whether it is from leveling or o
 
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Pokémon move learn method `form change` (`id` = `9`) and stores it into a dictionary with the following keys:  
 - `id`: the number associated with the Pokémon as an identifier.
@@ -515,7 +515,7 @@ An ability to lock on to a Pokémon, environments, or other targetable attribut
 `https://pokeapi.co/api/v2/move-target/{id or name}/`  
 id is the integer (1 as the lowest option) of which we’ll use the id number for an example Pokémon.
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Pokémon move target `fainting Pokémon`  (`id` = `16`) and stores it into a dictionary with the following keys:
 
@@ -562,7 +562,7 @@ An <i>ability</i> is a game mechanic that grants a passive effect for a Pokémon
 `https://pokeapi.co/api/v2/ability/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the ability named *Cute Charm* and stores it into a dictionary with the following keys:  
 - `effect_changes`: a list of historical effects this ability in previous versions and in different languages
@@ -626,7 +626,7 @@ Further, each stat has 5 options for the *characteristic* phrase applied. The mo
 `https://pokeapi.co/api/v2/characteristic/{id}`  
 where `id` is an integer (`1` as the lowest option)
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the characteristic *Highly curious* and stores it into a dictionary with the following keys:  
 - `descriptions`: a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. 
@@ -676,7 +676,7 @@ for characteristic in attack_data["characteristics"]:
 
 ---
 
-### Egg Groups
+### Egg groups
 
 A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are compatible for breeding.
 
@@ -685,7 +685,7 @@ A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are
 `https://pokeapi.co/api/v2/egg-group/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of *Egg Group*
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Egg Group *Dragon* and stores it into a dictionary with the following keys:  
 - `id`: an integer (starting with 1) that acts as the identifier for the Egg Group
@@ -725,7 +725,7 @@ Most Pokémon have a *gender*, either male or female, though some species do not
 `https://pokeapi.co/api/v2/gender/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *gender*
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the Gender *female* and stores it into a dictionary with the following keys:
 - `id`: an integer (starting with 1) that acts as the identifier for the Gender
@@ -759,7 +759,7 @@ def gendered_evolution(pokemon):
 
 ---
 
-### Growth Rates
+### Growth rates
 
 A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The options are as follows:
 - erratic
@@ -816,7 +816,7 @@ A Pokémon's *Nature* defines how they behave, what flavors it likes and dislike
 `https://pokeapi.co/api/v2/nature/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *nature*
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the nature *sassy* and stores it into a dictionary with the following keys:
 - `decreased_stat`: a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature
@@ -870,7 +870,7 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 `https://pokeapi.co/api/v2/pokeathlon-stat/{id or name}`
 where `id` is an integer (`1` as the lowest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
 
-##### Examples
+#### Examples
 
 The following Python code retreives JSON data for the Pokéatholon Stat *jump* and stores it into a dictionary with the following keys:
 - `affecting_natures`: a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impacted. See (Natures)[#natures] for more information.
@@ -917,7 +917,7 @@ Players encounter Pokémon in multiple locations. *Location Areas* describe wher
 `https://pokeapi.co/api/v2/pokemon/{id or name}/encounters`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the location areas of the Pokémon Rhydon (this Pokémon's id is 1) and stores it into a dictionary with the following keys:  
 - `location_area`: the name of the location and the API url for that location
@@ -946,7 +946,7 @@ This additional code displays only the `name` of the location(s) in which player
 
 ---
 
-### Pokémon Colors
+### Pokémon colors
 
 Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted into a color group determined by the color covering most of their body. **Note**: Orange is not a color option. Orange Pokémon are listed as red or brown.  
 
@@ -958,7 +958,7 @@ returns all Pokémon colors. To return results from a specific color use:
 `https://pokeapi.co/api/v2/pokemon-color/{id or name}/`  
 where `id` is an integer representing the color's id (`1` as the lowest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 The following Python code retrieves JSON data for the color *blue* (the id for blue is 2) and stores it into a dictionary with the following keys:
 - `id`: the integer id of the color
 - `name`: the color's name (as a string)
@@ -993,7 +993,7 @@ for pokemon in color_2_data["pokemon_species"]:
 
 ---
 
-### Pokémon Forms
+### Pokémon forms
 
 Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pokémon that vary more than just visually are listed as different Pokémon entities. 
 
@@ -1001,7 +1001,7 @@ Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pok
 `https://pokeapi.co/api/v2/pokemon-form/{id or name}/`  
 where `id` is an integer representing the  Pokémon's id (`1` as the lowest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the West form of  the Pokémon 'Shellos' (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys:  
 - `id`: the Pokémon's id (as an integer) 
@@ -1059,7 +1059,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 
 ---
 
-### Pokémon Habitats
+### Pokémon habitats
 
 *Pokémon Habitats* are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon. There are nine habitats:  
 - Cave
@@ -1077,7 +1077,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 `https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 
 The following Python code retreives JSON data for the shape named *forest* and stores it into a dictionary with the following keys:  
 - `id`: the identifier for this resource
@@ -1130,7 +1130,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 `https://pokeapi.co/api/v2/pokemon-shape/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 
 The following Python code retreives JSON data for the shape named *ball* and stores it into a dictionary with the following keys:  
 - `awesome_names`: the "scientific" name of this Pokémon shape listed in different languages
@@ -1171,7 +1171,7 @@ A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes 
 `https://pokeapi.co/api/v2/pokemon-species/{id or name}`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 The following Python code retrieves JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:  
 - `base_happiness`: the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon
 - `capture_rate`: the base capture rate; up to 255. The higher the number, the easier the catch
@@ -1245,7 +1245,7 @@ for genus in butterfree_data["genera"]:
 `https://pokeapi.co/api/v2/stat/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the stat named <i>attack</i> and stores it into a dictionary with the following keys:
 - `affecting_moves`: a detail of moves which affect this stat positively or negatively
@@ -1299,7 +1299,7 @@ for increase in attack_data["affecting_natures"]["increase"]:
 `https://pokeapi.co/api/v2/type/{id or name}/`  
 where `id` is an integer (`1` as the lowest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
-##### Examples
+#### Examples
 
 The following Python code retrieves JSON data for the type named <i>ghost</i> and stores it into a dictionary with the following keys:  
 - `damage_relations`: a detail of how effective this type is toward others and vice versa
