@@ -291,7 +291,7 @@ for pokemon in bubble_data["learned_by_pokemon"]:
 
 <br>
 
-### Move Ailments
+### Move ailments
 
 *Move ailments* are status conditions caused by moves.   
 
@@ -332,7 +332,7 @@ for language in attack_data["names"]:
 
 <br>
 
-### Move Battle Styles
+### Move battle styles
 
 Pokémon moves have one of three different *move battle styles*. The three styles are:  
 - Attack
@@ -375,7 +375,7 @@ for language in attack_data["names"]:
 
 <br>
 
-### Move Categories
+### Move categories
 
 General *move categories* grouping similar move effects together. 
 
@@ -416,7 +416,7 @@ for move in swagger_data["moves"]:
 
 <br>
 
-### Move Damage Class
+### Move damage classes
 
 Certain types of Pokémon have a variety of moves that are special skills to be used against other opponents where these specialzed Pokémon are associated with a damage class.
 
@@ -461,7 +461,7 @@ for key in move_damage_class:
 
 <br>
 
-### Move Learn Method
+### Move learn method
 
 Pokémon that learn moves from certain methods whether it is from leveling or otherwise. This section focuses on how to identify these types of Pokémon.
 
@@ -506,7 +506,7 @@ for key in move_learn_method:
 
 <br>
 
-### Move Targets
+### Move targets
 
 An ability to lock on to a Pokémon, environments, or other targetable attributes. This section will focus on how to identify these types of move targets. 
 
@@ -856,7 +856,7 @@ print("A", sassy_data["name"], "Pokémon has the following attributes:\n",
 
 ---
 
-### Pokéatholon Stats
+### Pokéathlon stats
 
 A Pokéatholon is a competition where Pokémon race, jump, and participate in other field events. *Pokéatholon Stats* define how a Pokémon performs in these events. There are five different stats:  
 - speed
@@ -908,7 +908,7 @@ for nature in jump_data["affecting_natures"]["decrease"]:
 
 ---
 
-### Pokémon Location Areas
+### Pokémon location areas
 
 Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
 
