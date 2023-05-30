@@ -472,6 +472,8 @@ Pokémon moves have one of three different *move battle styles*. The three style
 - Defense
 - Support 
 
+<br>
+
 #### API path
 
 `https://pokeapi.co/api/v2/move-battle-style/{id or name}/`
@@ -1263,6 +1265,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 - Sea
 - Urban
 - Waters-edge
+
 <br>
 
 #### API path
@@ -1321,6 +1324,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 - Humanoid
 - Bug-wings
 - Armor
+
 <br>
 
 #### API path
@@ -1587,18 +1591,18 @@ for pokemon in pokemon_json["results"]:
 
 There are various ways to search for Pokémon by filters. Please refer to the example code in the following sections:  
 - [Abilities](#abilities)
-- [Egg Group](#egg-group)
-- [Growth Rates](#growth-rates)
+- [Egg groups](#egg-groups)
+- [Growth rates](#growth-rates)
 
 ---
 
 ## Display Pokémon image
 
-To display images in Python, install one more library named *Pillow*. To do this, type `pip install pillow` in your Terminal (just like `pip install requests` as explained in [Getting Started](getting-started)).
+To display images in Python, install one more library named *Pillow*. To do this, type `pip install pillow` in your Terminal (just like `pip install requests` as explained in [Getting started](#getting-started).
 
 <br>
 
-The following Python code creates a Pokédex (see (Create Pokédex)[create-pokédex]), then defines two functions to display an image of any given Pokémon. The sample call included displays an image of Skitty.
+The following Python code creates a Pokédex (see [Create Pokédex](#create-pokédex)), then defines two functions to display an image of any given Pokémon. The sample call included displays an image of Skitty.
 
 ```python
 from PIL import Image
