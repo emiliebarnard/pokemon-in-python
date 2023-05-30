@@ -73,6 +73,8 @@ The purpose of this section is to provide details on how to download and install
 * **System OS:** Microsoft Windows 10 and 11 (32-bit and 64-bit), macOS X (High Sierra 10.13+), Linux (Debian): Ubuntu Desktop 16.04, Debian 9, & Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 34
 * [System requirements documentation](https://code.visualstudio.com/docs/supporting/requirements)
 
+<br>
+
 ### Python requirements
 * **Hardware:** 8GB RAM or higher (recommended)
 * **Software:** Latest Python version 3.11.3 release - Microsoft Windows 10 or 11 and macOS 13 or higher, & Linux (pre-installed) for most systems.
@@ -83,20 +85,20 @@ The purpose of this section is to provide details on how to download and install
 
 ## Download and install software
 
-1. Download [Visual Studio Code](https://code.visualstudio.com/).
+1\. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image.png)
 
 ![Visual Studio Code choose operating system image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image%202.png)
 
 <br>
 
-2. Download [Python](https://www.python.org/downloads/).  
+2\. Download [Python](https://www.python.org/downloads/).  
 **Note:** Windows users may need to download Python directly from the [Microsoft Store](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K?hl=en-us&gl=us). The software auto-detects your OS for download.
 ![Python download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image.png)
 
 <br>
 
-3. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code. Clicking **Install** will open Visual Studio Code. Select **Install** in Visual Studio Code.  
+3\. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code. Clicking **Install** will open Visual Studio Code. Select **Install** in Visual Studio Code.  
 **Note:** When finished, a page will appear in Visual Studio Code titled, *"Get Started with Python Development."*
 ![Python install screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%202.png)
 
@@ -106,7 +108,7 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-4. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window will appear at the bottom of the screen.
+4\. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window will appear at the bottom of the screen.
 
 ![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%205%20Terminal.png)
 
@@ -114,7 +116,7 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-5. In the terminal window, type **pip install requests** and press **enter**. A wall of text will appear; the words **"successfully installed"** will display towards the bottom of the text.  
+5\. In the terminal window, type **pip install requests** and press **enter**. A wall of text will appear; the words **"successfully installed"** will display towards the bottom of the text.  
 **Note:** If an error appears, then type **pip3 install requests** instead for the **"succesfully installed"** message to display.
 
 ![Python success message in termail screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%207%20Success%20Message.png)
