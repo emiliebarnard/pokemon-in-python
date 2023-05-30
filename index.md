@@ -1429,9 +1429,24 @@ show_image("Skitty")
 
 ## Common errors
 
-### API errors
+### API error
+
+Below is a common error when working with the API:
+
+```  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)```
+
+In this scenario, check the API path call in the form of ```api_url = "https://pokeapi.co/api/v2/{category}/{name or id}/"```. If the syntax is correct, `name` or `id` likely does not exist for the specific `category`. Change `id` to `1` for further testing.
 
 ### Python errors
 
+Refer to the [Python documentation](https://docs.python.org/3/) for troubleshooting other Python-specific error messages.
+
 ## Links
+
+Refer to the below links for more resources:
+- [Bulbapedia, the community-driven Pokémon encyclopedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)
+- [PokéAPI on GitHub](https://github.com/PokeAPI/pokeapi)
+- [Python Docs: Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 
