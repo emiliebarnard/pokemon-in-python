@@ -937,6 +937,7 @@ A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The
 - slow
 - fluctuating
 
+<br>
 
 #### API path
 
@@ -1007,8 +1008,7 @@ The following Python code retrieves JSON data for the nature *sassy* and stores 
 | `pokeathlon_stat_changes` | a list of dictionaries with two keys, max_change and pokeathalon_stat. pokeathalon_stat is a dictionary with two keys, name and url. This lists all Pokéathalon stats affected by this nature and how much they are impacted. See (Pokéatholon Stats)[#pokéatholon-stats] for more information. | list |
 
 ```python
-import requests
-import json
+import requests, json
 
 # fetch the api data and convert to dictionary:
 api_url = "https://pokeapi.co/api/v2/nature/sassy"
@@ -1041,6 +1041,7 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 - skill
 - stamina
 - jump
+
 <br>
 
 #### API path
@@ -1061,9 +1062,7 @@ The following Python code retreives JSON data for the Pokéatholon Stat *jump* 
 | `names` | a list of names for this skill in different languages | list |
 
 ```python
-import requests
-import json
-
+import requests, json
 
 # fetch the api data and convert to dictionary:
 api_url = "https://pokeapi.co/api/v2/pokeathlon-stat/jump"
@@ -1146,6 +1145,7 @@ returns all Pokémon colors. To return results from a specific color use:
 where `id` is an integer representing the color's id (`1` as the lowest option and `10` as the highest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
 
 #### Examples
+
 The following Python code retrieves JSON data for the color *blue* (the id for blue is 2) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
@@ -1309,6 +1309,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 ---
 
 ### Pokémon shapes
+
 *Pokémon Shape* is used for sorting Pokémon in a Pokédex. There are 14 shapes:  
 - Ball
 - Squiggle
@@ -1360,7 +1361,7 @@ for key in ball_data:
 <br>
 
 This additional line of code displays all Pokémon that have this shape:
-<br>
+
 ```python
 for pokemon_species in ball_data["pokemon_species"]:
     print(pokemon_species["name"])
@@ -1379,6 +1380,7 @@ A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes 
 where `id` is an integer (`1` as the lowest option and `1010` as the highest option) and `name` is a lower-case string where spaces are replaced with `-`   
 
 #### Examples
+
 The following Python code retrieves JSON data for the species named <i>Butterfree</i> and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
@@ -1598,7 +1600,7 @@ There are various ways to search for Pokémon by filters. Please refer to the ex
 
 ## Display Pokémon image
 
-To display images in Python, install one more library named *Pillow*. To do this, type `pip install pillow` in your Terminal (just like `pip install requests` as explained in [Getting started](#getting-started).
+To display images in Python, install one more library named *Pillow*. To do this, type `pip install pillow` in your Terminal (just like `pip install requests`) as explained in [Getting started](#getting-started).
 
 <br>
 
