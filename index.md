@@ -159,8 +159,8 @@ The following Python code retrieves JSON data for the encounter method called �
 | ----- | -------------------- | ---- |
 | `id` | the number associated with the encounter method as an identifier | integer |
 | `name` | the encounter method's name | string |
-| `order` | a good value for sorting | integer |
 | `names` | a list of names for this encounter method in different languages | list
+| `order` | a good value for sorting | integer |
 
 ```python
 import requests, json
@@ -243,9 +243,9 @@ The following Python code retrieves JSON data for the encounter method called �
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
+| `condition` | the condition this encounter condition value is related to | dictionary |
 | `id` | the number associated with the encounter condition value as an identifier | integer |
 | `name` | the encounter condition value's name | string |
-| `condition` | the condition this encounter condition value is related to | dictionary |
 | `names` | a list of names for this encounter condition value different languages | list
 
 <br>
@@ -277,9 +277,9 @@ The following Python code retrieves JSON data for the Pokémon Magikarp (`id` =
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the number associated with the Pokémon as an identifier | integer |
 | `baby_trigger_item` | the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form | dictionary |
 | `chain` | the base link to indicate all evolution details of the identified Pokémon and showcase evolution order | dictionary |
+| `id` | the number associated with the Pokémon as an identifier | integer |
 
 <br>
 
@@ -371,26 +371,26 @@ The following Python code retrieves JSON data for the move called 'bubble' (the 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the move's id | integer |
-| `name` | the move's name | string |
 | `accuracy` | the chance of this move's success as a percentage value | integer |
-| `effect_chance` | the chance of this move's effect happening as a percentage value | integer |
-| `pp` | this move's power points (power points determine the number of times a move can be used) | integer |
-| `priority` | sets the order of moves in battle with values between -8 and 8 ([See Bulbapedia for more information about priority](https://bulbapedia.bulbagarden.net/wiki/Priority)) | integer |
-| `power` | the power of this move (moves without a base power have a value of 0) | integer |
 | `contest_combos` | the contest combos this move is involved in the information includes which normal or super moves are used before or after this move | dictionary |
-| `contest_type` | the type of appeal this moves gives Pokémon when they use it in a contest  | dictionary |
 | `contest_effect` | the effect this move has when used in a contest | dictionary |
+| `contest_type` | the type of appeal this moves gives Pokémon when they use it in a contest  | dictionary |
 | `damage_class` | the type of damage this move does | dictionary |
-| `effect_entries` | the effect of this move in different languages | list |
+| `effect_chance` | the chance of this move's effect happening as a percentage value | integer |
 | `effect_changes` | previous effects this move had across version groups in different games | list |
-| `learned_by_pokemon` | Pokémon capable of learning this move | list |
+| `effect_entries` | the effect of this move in different languages | list |
 | `flavor_text_entries` | the flavor text for this move in different languages | list |
 | `generation` | the generation this move was introduced | dictionary |
+| `id` | the move's id | integer |
+| `learned_by_pokemon` | Pokémon capable of learning this move | list |
 | `machines` | machines this move is learned from | list |
 | `meta` | Metadata about this move | dictionary |
+| `name` | the move's name | string |
 | `names` | names for this move in different languages | list |
 | `past_values` | move resource values changes in different games | list |
+| `power` | the power of this move (moves without a base power have a value of 0) | integer
+| `pp` | this move's power points (power points determine the number of times a move can be used) | integer |
+| `priority` | sets the order of moves in battle with values between -8 and 8 ([See Bulbapedia for more information about priority](https://bulbapedia.bulbagarden.net/wiki/Priority)) | integer |
 | `stat_changes` | the stats changed with the amount they change | list |
 | `super_contest_effect` | the effect this move has in a super contest | dictionary |
 | `target` | the type of target receiving the effects of this move | dictionary |
@@ -437,8 +437,8 @@ The following Python code retrieves JSON data for the move ailment called 'sleep
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
 | `id` | the id of the move ailment | integer |
-| `name` | the move ailment's name | string |
 | `moves` | a list of moves that cause this ailment | list |
+| `name` | the move ailment's name | string |
 | `names` | a list of names for this move ailment in different languages | list |
 
 <br>
@@ -530,10 +530,10 @@ The following Python code retrieves JSON data for the move category called 'swag
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the id of the move category | integer |
-| `name` | the move category's name | string |
-| `moves` | a list of moves assigned to this category | list |
 | `descriptions` | descriptions of this category in different languages | list |
+| `id` | the id of the move category | integer |
+| `moves` | a list of moves assigned to this category | list |
+| `name` | the move category's name | string |
 
 <br>
 
@@ -575,10 +575,10 @@ The following Python code retrieves JSON data for the Pokémon move damage clas
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the number associated with the Pokémon as an identifier | integer |
-| `name` | the name of the Pokémon identified | string |
 | `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
+| `id` | the number associated with the Pokémon as an identifier | integer |
 | `moves` | a list of abilities associated with damage class Pokémon | list |
+| `name` | the name of the Pokémon identified | string |
 | `names` | the name of the Pokémon  identified used for multiple languages | list |
 
 <br>
@@ -623,9 +623,9 @@ The following Python code retrieves JSON data for the Pokémon move learn metho
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
+| `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
 | `id` | the number associated with the Pokémon as an identifier | integer |
 | `name` | the name of the Pokémon identified | string |
-| `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
 | `names` | the name of the Pokémon  identified used for multiple languages | list |
 | `version_groups` | a list showing the different types of Pokémon that learn moves from specific groups | list |
 
@@ -671,10 +671,10 @@ The following Python code retrieves JSON data for the Pokémon move target `fai
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the number associated with the Pokémon as an identifier | integer |
-| `name` | the name of the Pokémon identified | string |
 | `descriptions` | the displayed information of a Pokémon  used in multiple languages | list |
+| `id` | the number associated with the Pokémon as an identifier | integer |
 | `moves` | a list of abilities associated with damage class Pokémon | list |
+| `name` | the name of the Pokémon identified | string |
 | `names` | the name of the Pokémon  identified used for multiple languages | list |
 
 <br>
@@ -951,11 +951,11 @@ The following Python code retrieves JSON data for the growth rate *erratic* and 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | an integer (starting with 1) that acts as the identifier for the growth rate | integer |
-| `name` | a string, the name of the growth rate (in English) | string |
-| `formula` | a string that represents the mathematical formula used to calculate the rate at which a Pokémon levels up, based on current level and the specific growth rate | string |
 | `descriptions` | a list of dictionaries with keys description and language. language is also a dictionary with keys name and url. This is a list of the descriptions of the growth rate in various languages. | list |
+| `formula` | a string that represents the mathematical formula used to calculate the rate at which a Pokémon levels up, based on current level and the specific growth rate | string |
+| `id` | an integer (starting with 1) that acts as the identifier for the growth rate | integer |
 | `levels` | a list of dictionaries with keys level and experience. This indicates how much experience is needed to level up based on the current level and growth rate. | list |
+| `name` | a string, the name of the growth rate (in English) | string |
 | `pokemon_species` | a list of dictionaries with keys name and url. This is a list of all Pokémon that level up at this growth rate. | list |
 
 ```python
@@ -1198,20 +1198,20 @@ The following Python code retrieves JSON data for the West form of  the Pokémon
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `id` | the Pokémon's id | integer |
-| `name` | the Pokémon's name | string |
-| `order` | indicates where in the list of all Pokémon forms the Pokémon form you are looking for is located | integer |
-| `form_order` | the order this Pokémon form appears relative to other Pokémon of the same species | integer |
-| `is_default` | set to 'true' for only one Pokémon can be set to default within a species | boolean | 
-| `is_battle_only` | indicates if the form can only happen in battle | boolean |
-| `is_mega`|  indicates if the form is a mega form or not | boolean |
 | `form_name` | the name of the form | string |
-| `pokemon` | the Pokémon that can take this form including their API path | dictionary |
-| `types` | a list of the types this Pokémon form has | list |
-| `sprites` | URL links to the sprites used to represent this Pokémon form | list |
-| `version_group` | the version name and API path for the version group this Pokémon form was introduced in | dictionary |
-| `names` | a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist) | list |
 | `form_names` | a list of the specific form names for this Pokemon form in different languages  (this is empty if no specific names exist) | list |
+| `form_order` | the order this Pokémon form appears relative to other Pokémon of the same species | integer |
+| `id` | the Pokémon's id | integer |
+| `is_battle_only` | indicates if the form can only happen in battle | boolean |
+| `is_default` | set to 'true' for only one Pokémon can be set to default within a species | boolean |
+| `is_mega`|  indicates if the form is a mega form or not | boolean |
+| `name` | the Pokémon's name | string |
+| `names` | a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist) | list |
+| `order` | indicates where in the list of all Pokémon forms the Pokémon form you are looking for is located | integer |
+| `pokemon` | the Pokémon that can take this form including their API path | dictionary |
+| `sprites` | URL links to the sprites used to represent this Pokémon form | list |
+| `types` | a list of the types this Pokémon form has | list |
+| `version_group` | the version name and API path for the version group this Pokémon form was introduced in | dictionary |
 
 ```python
 import requests, json
