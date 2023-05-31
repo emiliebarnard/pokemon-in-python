@@ -245,7 +245,7 @@ The following Python code retrieves JSON data for the encounter method called �
 | ----- | -------------------- | ---- |
 | `id` | the number associated with the encounter condition value as an identifier | integer |
 | `name` | the encounter condition value's name | string |
-| `condition` | the condition this encounter condition value is related to | NamedAPIResource (EncounterCondition) object |
+| `condition` | the condition this encounter condition value is related to | dictionary |
 | `names` | a list of names for this encounter condition value different languages | list
 
 <br>
@@ -278,8 +278,8 @@ The following Python code retrieves JSON data for the Pokémon Magikarp (`id` =
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
 | `id` | the number associated with the Pokémon as an identifier | integer |
-| `baby_trigger_item` | the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form | NamedAPIResource(Item) object |
-| `chain` | the base link to indicate all evolution details of the identified Pokémon and showcase evolution order | ChainLink object |
+| `baby_trigger_item` | the specified item requirement needed to trigger the egg hatching process from a baby Pokémon versus a standard Pokémon that doesn’t have a baby form | dictionary |
+| `chain` | the base link to indicate all evolution details of the identified Pokémon and showcase evolution order | dictionary |
 
 <br>
 
@@ -378,23 +378,23 @@ The following Python code retrieves JSON data for the move called 'bubble' (the 
 | `pp` | this move's power points (power points determine the number of times a move can be used) | integer |
 | `priority` | sets the order of moves in battle with values between -8 and 8 ([See Bulbapedia for more information about priority](https://bulbapedia.bulbagarden.net/wiki/Priority)) | integer |
 | `power` | the power of this move (moves without a base power have a value of 0) | integer |
-| `contest_combos` | the contest combos this move is involved in the information includes which normal or super moves are used before or after this move | ContestComboSets object |
-| `contest_type` | the type of appeal this moves gives Pokémon when they use it in a contest  | NamedAPIRecourse(ContestType) object |
-| `contest_effect` | the effect this move has when used in a contest | APIRsource(ContestEffect) object |
-| `damage_class` | the type of damage this move does | NamedAPIResource(MoveDamageClass) object |
+| `contest_combos` | the contest combos this move is involved in the information includes which normal or super moves are used before or after this move | dictionary |
+| `contest_type` | the type of appeal this moves gives Pokémon when they use it in a contest  | dictionary |
+| `contest_effect` | the effect this move has when used in a contest | dictionary |
+| `damage_class` | the type of damage this move does | dictionary |
 | `effect_entries` | the effect of this move in different languages | list |
 | `effect_changes` | previous effects this move had across version groups in different games | list |
 | `learned_by_pokemon` | Pokémon capable of learning this move | list |
 | `flavor_text_entries` | the flavor text for this move in different languages | list |
-| `generation` | the generation this move was introduced | NamedAPIResource(Generation) object |
+| `generation` | the generation this move was introduced | dictionary |
 | `machines` | machines this move is learned from | list |
-| `meta` | Metadata about this move | MoveMetaData object |
+| `meta` | Metadata about this move | dictionary |
 | `names` | names for this move in different languages | list |
 | `past_values` | move resource values changes in different games | list |
 | `stat_changes` | the stats changed with the amount they change | list |
-| `super_contest_effect` | the effect this move has in a super contest | APIResource(SuperContestEffect) object |
-| `target` | the type of target receiving the effects of this move | NamedAPIResource(MoveTarget) object |
-| `type` | the elemental type of this move | NamedAPIResource(Type) object |
+| `super_contest_effect` | the effect this move has in a super contest | dictionary |
+| `target` | the type of target receiving the effects of this move | dictionary |
+| `type` | the elemental type of this move | dictionary |
 
 <br>
 
@@ -724,7 +724,7 @@ The following Python code retrieves JSON data for the ability named *Cute Charm*
 | `effect_changes` | a list of historical effects this ability in previous versions and in different languages | list |
 | `effect_entries` | a list of the current effect this this ability in different languages | list |
 | `flavor_text_entries` | a list of the flavor text, or short text often displayed in images, of this ability in different languages | list |
-| `generation` | the Pokémon generation in which this ability first appeared | 	NamedAPIResource(Generation) object |
+| `generation` | the Pokémon generation in which this ability first appeared | 	dictionary |
 | `id` | an integer (`1` as the lowest option) unique to this ability | integer |
 | `is_main_series` | a boolean to flag whether or not this ability first appeared in the main series of the games | boolean |
 | `name` | a string representing this ability's name | string |
@@ -791,7 +791,7 @@ The following Python code retrieves JSON data for the characteristic *Highly cur
 | ----- | -------------------- | ---- |
 | `descriptions` | a list of dictionaries with two keys, descriptions and language. The description key stores a string value which is the description in the associated language. The language key holds another dictionary with two keys, name and url, where both values are strings associated with the language. | list | 
 | `gene_modulo` | an inteeger between 0 and 4 (inclusive) which is the remainder of the highest IV divided by 5 (modulo 5) | integer |
-| `highest_stat` | a dictionary with two keys, name and url, both of which are string values that refer to the IV associated with this characteristic | object |
+| `highest_stat` | a dictionary with two keys, name and url, both of which are string values that refer to the IV associated with this characteristic | dictionary |
 | `id` | an integer (`1` as the lowest option) unique to this characteristic | integer |
 | `possible_values` | a list of integers that represent the possible values of the highest IV of a Pokémon with this characteristic | integer |
 
@@ -997,11 +997,11 @@ The following Python code retrieves JSON data for the nature *sassy* and stores 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `decreased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature | NamedAPIResource(Stat) object |
-| `hates_flavor` | a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature | NamedAPIResource(BerryFlavor) object |
+| `decreased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is decreased by 10% due to this nature | dictionary |
+| `hates_flavor` | a dictionary with two keys, name and url, that identifies the the flavor hated by Pokémon with this nature | dictionary |
 | `id` | an integer (starting with 1) that acts as the identifier for the Nature | integer |
-| `increased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is increased by 10% due to this nature | NamedAPIResource(Stat) object |
-| `likes_flavor` | a dictionary with two keys, name and url, that identifies the the flavor liked by Pokémon with this nature | NamedAPIResource(BerryFlavor) object |
+| `increased_stat` | a dictionary with two keys, name and url, that identifies the stat whose value is increased by 10% due to this nature | dictionary |
+| `likes_flavor` | a dictionary with two keys, name and url, that identifies the the flavor liked by Pokémon with this nature | dictionary |
 | `move_battle_style_preferences` | a list of dictionaries with three keys, low_hp_preference, high_hp_preference, and move_battle_style. move_battle_stype is a dictionary with two keys, name and url. low_hp_preference and high_hp_preference are integers that refer to how likely a Pokémon with this nature is to use a particular move battle style. | list |
 | `name` | a string, the name of the Nature (in English) | string |
 | `names` | a list of names for this nature in different languages | list |
@@ -1056,7 +1056,7 @@ The following Python code retreives JSON data for the Pokéatholon Stat *jump* 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `affecting_natures` | a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impacted. See (Natures)[#natures] for more information. | NaturePokeathlonStatAffectSets object |
+| `affecting_natures` | a list of dictionaries with two keys, increase and decrease. Both increase and decrease are dictionaries with two keys, max_change and nature. This list contains data on which Pokémon natures impact the stat, and how it is impacted. See (Natures)[#natures] for more information. | list |
 | `id` | an integer (starting with 1) that acts as the identifier for the stat | integer |
 | `name` | a string, the name of the stat (in English) | string |
 | `names` | a list of names for this skill in different languages | list |
@@ -1105,7 +1105,7 @@ The following Python code retrieves JSON data for the location areas of the Pok�
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `location_area` | the name of the location and the API url for that location | NamedAPIResource(LocationArea) object |
+| `location_area` | the name of the location and the API url for that location | dictionary |
 | `version_details` | a list of encounters, chances, and versions related to the specified Pokémon | list |
 
 ```python
@@ -1206,10 +1206,10 @@ The following Python code retrieves JSON data for the West form of  the Pokémon
 | `is_battle_only` | indicates if the form can only happen in battle | boolean |
 | `is_mega`|  indicates if the form is a mega form or not | boolean |
 | `form_name` | the name of the form | string |
-| `pokemon` | the Pokémon that can take this form including their API path | NamedAPIResource(Pokemon) object |
+| `pokemon` | the Pokémon that can take this form including their API path | dictionary |
 | `types` | a list of the types this Pokémon form has | list |
-| `sprites` | URL links to the sprites used to represent this Pokémon form | PokemonFormSprites object |
-| `version_group` | the version name and API path for the version group this Pokémon form was introduced in | NamedAPIResource(VersionGroup) object |
+| `sprites` | URL links to the sprites used to represent this Pokémon form | list |
+| `version_group` | the version name and API path for the version group this Pokémon form was introduced in | dictionary |
 | `names` | a list of the full names of this Pokémon form in different languages (this is empty if no specific names exist) | list |
 | `form_names` | a list of the specific form names for this Pokemon form in different languages  (this is empty if no specific names exist) | list |
 
@@ -1387,18 +1387,18 @@ The following Python code retrieves JSON data for the species named <i>Butterfre
 | ----- | -------------------- | ---- |
 | `base_happiness` | the happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon | integer |
 | `capture_rate` | the base capture rate; up to 255. The higher the number, the easier the catch | integer |
-| `color` | the color of this Pokémon for Pokédex search | NamedAPIResource(PokemonColor) object |
+| `color` | the color of this Pokémon for Pokédex search | dictionary |
 | `egg_groups` | a list of egg groups this Pokémon species is a member of | list |
-| `evolution_chain` | the evolution chain this Pokémon species is a member of | APIResource(EvolutionChain) object |
-| `evolves_from_species` | the Pokémon species that evolves into this Pokemon_species | NamedAPIResource(PokemonSpecies) object |
+| `evolution_chain` | the evolution chain this Pokémon species is a member of | dictionary |
+| `evolves_from_species` | the Pokémon species that evolves into this Pokemon_species | dictionary |
 | `flavor_text_entries` | a list of flavor text entries for this Pokémon species | list |
 | `form_descriptions` | descriptions of different forms Pokémon take on within the Pokémon species | list |
 | `forms_switchable` | whether or not this Pokémon has multiple forms and can switch between them | boolean |
 | `gender_rate` | the chance of this Pokémon being female, in eighths; or -1 for genderless | integer |
 | `genera` | the genus of this Pokémon species listed in multiple languages | list |
-| `generation` | the generation this Pokémon species was introduced in | NamedAPIResource(Generation) object |
-| `growth_rate` | the rate at which this Pokémon species gains levels | NamedAPIResource(GrowthRate) object |
-| `habitat` | the habitat this Pokémon species can be encountered in | NamedAPIResource(PokemonHabitat) object |
+| `generation` | the generation this Pokémon species was introduced in | dictionary |
+| `growth_rate` | the rate at which this Pokémon species gains levels | dictionary |
+| `habitat` | the habitat this Pokémon species can be encountered in | dictionary |
 | `has_gender_differences` | whether or not this Pokémon has visual gender differences | boolean |
 | `hatch_counter` | initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer |
 | `id` | the identifier for this resource | integer |
@@ -1410,7 +1410,7 @@ The following Python code retrieves JSON data for the species named <i>Butterfre
 | `order` | the order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage | integer |
 | `pal_park_encounters` | a list of encounters that can be had with this Pokémon species in pal park | list |
 | `pokedex_numbers` | a list of Pokedexes and the indexes reserved within them for this Pokémon species | list |
-| `shape` | the shape of this Pokémon for Pokédex search | NamedAPIResource(PokemonShape) object |
+| `shape` | the shape of this Pokémon for Pokédex search | dictionary |
 | `varieties` | a list of the Pokémon that exist within this Pokémon species | list |
 
 ```python
@@ -1464,13 +1464,13 @@ The following Python code retrieves JSON data for the stat named <i>attack</i> a
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `affecting_moves` | a detail of moves which affect this stat positively or negatively | MoveStatAffectSets object |
-| `affecting_natures` | a detail of natures which affect this stat positively or negatively | NatureStatAffectSets object |
+| `affecting_moves` | a detail of moves which affect this stat positively or negatively | dictionary |
+| `affecting_natures` | a detail of natures which affect this stat positively or negatively | dictionary |
 | `characteristics` | a list of characteristics that are set on a Pokémon when its highest base stat is this stat | list |
 | `game_index` | id the games use for this stat | integer |
 | `id` | the identifier for this resource | integer |
 | `is_battle_only` | whether this stat only exists within a battle | boolean |
-| `move_damage_class` | the class of damage this stat is directly related to | NamedAPIResource(MoveDamageClass) object |
+| `move_damage_class` | the class of damage this stat is directly related to | dictionary |
 | `name` | the name for this resource | string |
 | `names` | the name of this resource listed in different languages | list |
 
@@ -1522,11 +1522,11 @@ The following Python code retrieves JSON data for the type named <i>ghost</i> an
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
-| `damage_relations` | a detail of how effective this type is toward others and vice versa | TypeRelations object |
+| `damage_relations` | a detail of how effective this type is toward others and vice versa | dictionary |
 | `game_indices` | a list of game indices relevent to this item by generation | list |
-| `generation` | the generation this type was introduced in | NamedAPIResource(Generation) object |
+| `generation` | the generation this type was introduced in | dictionary |
 | `id` | the identifier for this resource | integer |
-| `move_damage_class` | the class of damage inflicted by this type | NamedAPIResource(MoveDamageClass) object |
+| `move_damage_class` | the class of damage inflicted by this type | dictionary |
 | `moves` | a list of moves that have this type | list |
 | `name` | the name for this resource | string |
 | `names` | the name of this resource listed in different languages | list |
