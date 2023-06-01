@@ -84,11 +84,11 @@ The purpose of this section is to provide details on how to download and install
 <br>
 **Note:** Click on the video thumbnail image "Getting Started Poké-Py API Documentation" to be directed to the YouTube site to watch the video on the Getting Started section.
 
-[![Getting Started PokéAPI Video](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Getting%20Started%20Poke-Py%20API%20Video%20Thumbnail.png)](https://www.youtube.com/watch?v=8w09aMy0h9o)
-
 <br>
 
 ## Download and install software
+
+[![Getting Started PokéAPI Video](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Getting%20Started%20Poke-Py%20API%20Video%20Thumbnail.png)](https://www.youtube.com/watch?v=8w09aMy0h9o)
 
 1\. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image.png)
@@ -136,7 +136,7 @@ The PokéAPI site allows users to generate Pokémon attributes by typing in th
 
 1. Place the mouse cursor on the search bar. Click the search bar and for this example replace pokemon/ditto with pokemon/pikachu.  
 2. Click the **Submit** button.  
-3. Review the resource attributes below of the API’s result displaying Pikachu’s traits. You will use these resource attributes to create your Python code and generate API requests for Pokémon in the **Core Python Interactions** section.
+3. Review the resource attributes below of the API’s result displaying Pikachu’s traits. You will use these resource attributes to create your Python code and generate API requests for Pokémon in the **Core Python interactions** section.
 
 ![Pikachu API attribute display screen image example](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/PokeAPI%20Image%20Pikachu%20Example.png)
 
@@ -843,7 +843,7 @@ for characteristic in attack_data["characteristics"]:
 
 ### Egg groups
 
-A Pokémon can belong to one or two *Egg Groups*, or groups of Pokémon that are compatible for breeding.
+A Pokémon can belong to one or two *egg groups*, or groups of Pokémon that are compatible for breeding.
 
 #### API path
 
@@ -853,7 +853,7 @@ where `id` is an integer (`1` as the lowest option and `15`as the highest option
 
 #### Examples
 
-The following Python code retrieves JSON data for the Egg Group *Dragon* and stores it into a dictionary with the following keys:  
+The following Python code retrieves JSON data for the egg group *Dragon* and stores it into a dictionary with the following keys:  
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -934,7 +934,7 @@ def gendered_evolution(pokemon):
 
 ### Growth rates
 
-A Pokémon's *Growth Rate* defines how quickly it levels up from experience. The options are as follows:
+A Pokémon's *growth rate* defines how quickly it levels up from experience. The options are as follows:
 - erratic
 - fast
 - medium fast
@@ -988,7 +988,7 @@ for pokemon in erratic_data["pokemon_species"]:
 
 ### Natures
 
-A Pokémon's *Nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
+A Pokémon's *nature* defines how they behave, what flavors it likes and dislikes, and typically the value of some of its stats. There are 25 possible natures, ranging from *hardy* to *quirky*.
 
 #### API path
 
@@ -1040,7 +1040,7 @@ print("A", sassy_data["name"], "Pokémon has the following attributes:\n",
 
 ### Pokéathlon stats
 
-A Pokéatholon is a competition where Pokémon race, jump, and participate in other field events. *Pokéatholon Stats* define how a Pokémon performs in these events. There are five different stats:  
+A Pokéatholon is a competition where Pokémon race, jump, and participate in other field events. *Pokéatholon stats* define how a Pokémon performs in these events. There are five different stats:  
 - speed
 - power
 - skill
@@ -1053,11 +1053,11 @@ A Pokéatholon is a competition where Pokémon race, jump, and participate in ot
 
 `https://pokeapi.co/api/v2/pokeathlon-stat/{id or name}/`
 
-where `id` is an integer (`1` as the lowest option and `5` as the highest option) and `name` is a string referring to the name of the *Pokéatholon Stats*
+where `id` is an integer (`1` as the lowest option and `5` as the highest option) and `name` is a string referring to the name of the *Pokéatholon stats*
 
 #### Examples
 
-The following Python code retreives JSON data for the Pokéatholon Stat *jump* and stores it into a dictionary with the following keys:
+The following Python code retreives JSON data for the Pokéatholon stat *jump* and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -1080,7 +1080,7 @@ for key in jump_data:
 
 <br>
 
-The following code snippet displays how various Natures impact *jump*:
+The following code snippet displays how various natures impact *jump*:
 
 ```python
 print("The following Natures increase the", jump_data["name"] ,"stat:")
@@ -1152,7 +1152,7 @@ for game in eevee_data["game_indices"]:
 
 ### Pokémon location areas
 
-Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
+Players encounter Pokémon in multiple locations. *Location areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have location area data. 
 
 #### API path
 
@@ -1303,7 +1303,7 @@ for key in shellos_e_form_data:
 
 <br>
 
-The two versions of Shellos are right next to each other in the Pokemon Forms Order. To see their order numbers together use this additional line of code:
+The two versions of Shellos are right next to each other in the Pokemon forms order. To see their order numbers together use this additional line of code:
 
 ```python
 print("Shellos West's Order Number is", shellos_w_form_data["order"], "and Shellos East's Order Number is", shellos_e_form_data["order"]) 
@@ -1319,7 +1319,7 @@ returns an error because Shellos has two forms and the API needs you to specifiy
 
 ### Pokémon habitats
 
-*Pokémon Habitats* are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon. There are nine habitats:  
+*Pokémon habitats* are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon. There are nine habitats:  
 - Cave
 - Forest
 - Grassland
@@ -1374,7 +1374,7 @@ for pokemon_species in forest_data["pokemon_species"]:
 
 ### Pokémon shapes
 
-*Pokémon Shape* is used for sorting Pokémon in a Pokédex. There are 14 shapes:  
+*Pokémon shape* is used for sorting Pokémon in a Pokédex. There are 14 shapes:  
 - Ball
 - Squiggle
 - Fish
@@ -1435,7 +1435,7 @@ for pokemon_species in ball_data["pokemon_species"]:
     
 ### Pokémon species
 
-A <i>Pokémon Species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
+A <i>Pokémon species</i> forms the basis for at least one Pokémon. Attributes of a <i>Pokémon species</i> are shared across all varieties of Pokémon within the species. 
 
 #### API path
 
