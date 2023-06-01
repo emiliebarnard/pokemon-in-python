@@ -1089,6 +1089,62 @@ for nature in jump_data["affecting_natures"]["decrease"]:
 
 ---
 
+### Pokémon 
+*Pokémon* are creatures in the Pokémon games. Their appearances vary greatly. Pokémon are caught using Pokéballs and used to battle other Pokémon. 
+
+#### API Path
+`https://pokeapi.co/api/v2/pokemon/{id or name}/`
+
+where `id` is an integer representing the Pokémon's id (`1` as the lowest option and `1010` as the current highest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
+
+#### Examples
+
+The following Python code retrieves JSON data for *eevee* (the id for eevee is 133) and stores it into a dictionary with the following keys:
+
+| <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
+| ----- | -------------------- | ---- |
+| `abilities` | a list of abilities this Pokémon might have | list |
+| `base_experience` | the base amount of experience gained my defeating this Pokémon | integer |
+| `forms` | a list of forms this Pokémon can have | list | 
+| `game_indices` | game indices relevant to this Pokémon by generation | list |
+| `height` | the Pokémon's height in decimeters | integer |
+| `held_items` | items this Pokémon may hold when encountered | list | 
+| `id` | the id of the Pokémon | integer |
+| `is_default` | true for one Pokémon to be the default for the species | boolean | 
+| `location_area_encounters` | a link to a list of location areas this Pokémon may be encountered | string | 
+| `moves` | moves this Pokémon may have or learn with information about specific version groups | list | 
+| `name` | the Pokémon's name | string |
+| `order` | this Pokémon's order among other Pokémon | integer |
+| `past_types` | details about this Pokémon in previous generations | list | 
+| `species` | this Pokémon's species | dictionary | 
+| `sprites` | Sprites used to depict this Pokémon visually | dictionary |
+| `stats` | this Pokémon's base stat values | list | 
+| `types` | this Pokémon's types | list | 
+| `weight` | this Pokémon's weight in hectograms | integer |
+
+```python
+import requests, json
+
+# fetch the api data for eevee and convert to dictionary:
+api_url = "https://pokeapi.co/api/v2/pokemon/eevee/"
+eevee_data = requests.get(api_url).json()
+
+for key in eevee_data:
+    print("key:", key, "\n", "value:", eevee_data[key], "\n")
+```
+
+<br>
+
+This additional code prints a list of the names of the Pokémon games that eevee is in:
+
+```python
+# print the names of all the games that eevee is in
+for game in eevee_data["game_indices"]:
+    print(game["version"]["name"])
+```
+
+---
+
 ### Pokémon location areas
 
 Players encounter Pokémon in multiple locations. *Location Areas* describe where a specified Pokémon can be encountered. Note: Some Pokémon do not have Location Area data. 
@@ -1124,6 +1180,7 @@ for location in rhydon_locations:
 <br>
 
 This additional code displays only the `name` of the location(s) in which players can encounter the specified Pokémon:
+
 ```python
  for location in rhydon_locations:
     print("Rhydon Encounter Location:", location["location_area"]["name"])
@@ -1169,6 +1226,7 @@ for key in color_2_data:
 <br>
 
 This additional line of code displays the name of the current color in English:
+
 ```python
 print(color_2_data["name"])
 ```
@@ -1176,6 +1234,7 @@ print(color_2_data["name"])
 <br>
 
 This code prints a list of all the blue Pokémon: 
+
 ```python
 for pokemon in color_2_data["pokemon_species"]:
     print(pokemon["name"])
