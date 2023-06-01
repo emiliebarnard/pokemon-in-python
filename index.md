@@ -83,6 +83,10 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
+![Getting Started PokéAPI Video](https://img.youtube.com/vi/8w09aMy0h9o/default.jpg)(https://www.youtube.com/watch?v=8w09aMy0h9o)
+
+<br>
+
 ## Download and install software
 
 1\. Download [Visual Studio Code](https://code.visualstudio.com/).
