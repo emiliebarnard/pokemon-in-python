@@ -88,7 +88,7 @@ The purpose of this section is to provide details on how to download and install
 
 ## Download and install software
 
-[![Getting Started PokéAPI Video](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Getting%20Started%20Poke-Py%20API%20Video%20Thumbnail.png)](https://www.youtube.com/watch?v=8w09aMy0h9o)
+[![Getting Started PokéAPI Video](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Getting%20Started%20Poke-Py%20API%20Video%20Thumbnail.png)](https://www.youtube.com/watch?v=8w09aMy0h9o){:target="_blank"}
 
 1\. Download [Visual Studio Code](https://code.visualstudio.com/).
 ![Visual Studio Code download screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Visual%20Studio%20Code%20Image.png)
