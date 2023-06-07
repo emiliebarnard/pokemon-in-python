@@ -10,7 +10,7 @@ This documentation was created as a team project for the Professional Technical 
 
 <br>
 
-The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon-in-python) and was last updated in May 2023.
+The documentation is hosted on [GitHub](https://github.com/emiliebarnard/pokemon-in-python) and was last updated in June 2023.
 
 ---
 
@@ -64,7 +64,7 @@ d = {
 **Objective:**
 The purpose of this section is to provide details on how to download and install Visual Studio Code and Python programs for coding with the PokéAPI.
 
-**Disclaimer:** The instructions provided within this section will work for both Microsoft Windows, Mac, and Linux users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
+**Note:** The instructions within this section work for Microsoft Windows, Mac, and Linux users. For full details on additional system requirements, please review the documentation referenced for each software listed below.
 
 ## Requirements
 
@@ -103,8 +103,8 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-3\. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code. Clicking **Install** will open Visual Studio Code. Select **Install** in Visual Studio Code.  
-**Note:** When finished, a page will appear in Visual Studio Code titled, *"Get Started with Python Development."*
+3\. Download [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for Visual Studio Code. Clicking **Install** opens Visual Studio Code. Select **Install** in Visual Studio Code.  
+**Note:** When finished, a page will appear in Visual Studio Code titled, *"Get Started with Python Development"*
 ![Python install screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%202.png)
 
 ![Python install screen in Microsoft Windows store image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%203.png)
@@ -113,7 +113,7 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-4\. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window will appear at the bottom of the screen.
+4\. Install the **Python Request Libraries**. Select **Terminal** from the top menu bar and then **New Terminal**. A small terminal window appears at the bottom of the screen.
 
 ![Python Terminal selection in Visual Studio Code screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%20Image%205%20Terminal.png)
 
@@ -121,7 +121,7 @@ The purpose of this section is to provide details on how to download and install
 
 <br>
 
-5\. In the terminal window, type **pip install requests** and press **enter**. A wall of text will appear; the words **"successfully installed"** will display towards the bottom of the text.  
+5\. In the terminal window, type **pip install requests** and press **enter**. A wall of text appears; the words **"successfully installed"** displays towards the bottom of the text.  
 **Note:** If an error appears, then type **pip3 install requests** instead for the **"succesfully installed"** message to display.
 
 ![Python success message in termail screen image](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/Python%207%20Success%20Message.png)
@@ -132,11 +132,11 @@ The purpose of this section is to provide details on how to download and install
 
 **Note:** Anyone can access PokéAPI as it is free to use and open source. Be sure to follow the Fair Use Policy referenced in PokéAPI’s [documentation](https://pokeapi.co/docs/v2) page.
 
-The PokéAPI site allows users to generate Pokémon attributes by typing in the name of a Pokémon. The resource for the Pokemon entered displays attributes from the API pull request. Below are example instructions of how to display Pikachu's traits. To perform the actions below, visit the [PokéAPI](https://pokeapi.co/) site.
+The PokéAPI site allows users to generate Pokémon attributes by typing in the name of a Pokémon. The resource for the Pokemon entered displays attributes from the API pull request. Below are example instructions of how to display Pikachu's traits. To perform the actions below, visit the [PokéAPI](https://pokeapi.co/) site:
 
 1. Place the mouse cursor on the search bar. Click the search bar and for this example replace pokemon/ditto with pokemon/pikachu.  
 2. Click the **Submit** button.  
-3. Review the resource attributes below of the API’s result displaying Pikachu’s traits. You will use these resource attributes to create your Python code and generate API requests for Pokémon in the **Core Python interactions** section.
+3. Review the resource attributes of the API’s result displaying Pikachu’s traits. You will use these resource attributes to create your Python code and generate API requests for Pokémon in the **Core Python interactions** section.
 
 ![Pikachu API attribute display screen image example](https://github.com/emiliebarnard/pokemon-in-python/raw/gh-pages/images/PokeAPI%20Image%20Pikachu%20Example.png)
 
@@ -154,11 +154,11 @@ There are various ways to find wild Pokémon so the player can either battle or
 
 `https://pokeapi.co/api/v2/encounter-method/{id or name}/`
 
-where id is an integer representing the encounter method id (1 as the lowest option and 31 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+where `id` is an integer representing the encounter method id (`1` as the lowest option and `31` as the highest option)  and `name` is a lower-case string (the encounter method name) where spaces are replaced with `-`
 
 ##### Examples
 
-The following Python code retrieves JSON data for the encounter method called ‘old-rod’ (the id for old-rod is 2) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the encounter method called *old-rod* (the id for old-rod is 2) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -197,11 +197,11 @@ Wild Pokémon can be found during specific scenarios. For example they can be f
 #### API path
 `https://pokeapi.co/api/v2/encounter-condition/{id or name}/`
 
-where id is an integer representing the encounter method id (1 as the lowest option and 13 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+where `id` is an integer representing the encounter method id (`1` as the lowest option and `13` as the highest option)  and `name` is a lower-case string (the encounter method name) where spaces are replaced with `-`
 
 ##### Examples
 
-The following Python code retrieves JSON data for the encounter method called ‘time’ (the id for time is 2) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the encounter method called *time* (the id for time is 2) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -240,11 +240,12 @@ This describes the various states an encounter condition can have. An encounter 
 #### API path
 
 `https://pokeapi.co/api/v2/encounter-condition-value/{id or name}/`
-where id is an integer representing the encounter method id (1 as the lowest option and 71 as the highest option)  and name is a lower-case string (the encounter method name) where spaces are replaced with -
+
+where `id` is an integer representing the encounter method id (`1` as the lowest option and `71` as the highest option)  and `name` is a lower-case string (the encounter method name) where spaces are replaced with `-`
 
 ##### Examples
 
-The following Python code retrieves JSON data for the encounter method called ‘time-day’ (the id for time is 4) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the encounter method called *time-day* (the id for time is 4) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -274,7 +275,7 @@ Many Pokémon have an evolution attribute that transforms into a new type of Po
 
 `https://pokeapi.co/api/v2/evolution-chain/{id}/` 
 
-id is the integer (`1` as the lowest option and `20` as the highest option) of which we’ll use the id number for an example Pokémon.
+`id` is the integer (`1` as the lowest option and `20` as the highest option) of which we’ll use the id number for an example Pokémon
 
 #### Examples
 
@@ -320,11 +321,12 @@ For more details on evolution methods that trigger transformations, please refer
 #### API path
 
 `https://pokeapi.co/api/v2/evolution-trigger/{id or name}/`  
-id is the integer (`1` as the lowest option and `13` as the highest option) of which we’ll use the id number for an example Pokémon.
+
+`id` is the integer (`1` as the lowest option and `13` as the highest option) of which we’ll use the id number for an example Pokémon
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon evolution trigger `three critical hits` (`id` = `8`) and stores it into a dictionary with the following keys: 
+The following Python code retrieves JSON data for the Pokémon evolution trigger *three critical hits* (`id` = `8`) and stores it into a dictionary with the following keys: 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -368,11 +370,11 @@ Pokémon use *moves* in battle. Some moves are used outside of battle, but only 
 
 `https://pokeapi.co/api/v2/move/{id or name}/`
 
-where id is an integer representing the move's `id` (`1` as the lowest option and `920` as the highest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
+where `id` is an integer representing the move's id (`1` as the lowest option and `920` as the highest option) and `name` is a lower-case string (the move's name) where spaces are replaced with `-`
 
 #### Examples
 
-The following Python code retrieves JSON data for the move called 'bubble' (the id for bubble is 145) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the move called *bubble* (the id for bubble is 145) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -437,7 +439,7 @@ where `id` is an integer representing the move ailment's id (`0` as the lowest o
 
 #### Examples
 
-The following Python code retrieves JSON data for the move ailment called 'sleep' (the id for sleep is 2) and stores it into a dictionary with the following keys:  
+The following Python code retrieves JSON data for the move ailment called *sleep* (the id for sleep is 2) and stores it into a dictionary with the following keys:  
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -487,7 +489,7 @@ where `id` is an integer representing the move battle style id (`1` as the lowes
 
 #### Examples
 
-The following Python code retrieves JSON data for the move battle style called 'attack' (the id for attack is 1) and stores it into a dictionary with the following keys:  
+The following Python code retrieves JSON data for the move battle style called *attack* (the id for attack is 1) and stores it into a dictionary with the following keys:  
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -531,7 +533,7 @@ where `id` is an integer representing the move categories id (`0` as the lowest 
 
 #### Examples
 
-The following Python code retrieves JSON data for the move category called 'swagger' (the id for swagger is 5) and stores it into a dictionary with the following keys:  
+The following Python code retrieves JSON data for the move category called *swagger* (the id for swagger is 5) and stores it into a dictionary with the following keys:  
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -572,11 +574,11 @@ Certain types of Pokémon have a variety of moves that are special skills to be
 
 `https://pokeapi.co/api/v2/move-damage-class/{id or name}/`
 
-id is the integer (`1` as the lowest option and `3` as the highest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `3` as the highest option) of which we’ll use the id number for an example Pokémon
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon move damage class `special` (`id` = `3`) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the Pokémon move damage class *special* (`id` = `3`) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -620,11 +622,11 @@ Pokémon that learn moves from certain methods whether it is from leveling or o
 
 `https://pokeapi.co/api/v2/move-learn-method/{id or name}/`
 
-id is the integer (`1` as the lowest option and `11` as the highest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `11` as the highest option) of which we’ll use the id number for an example Pokémon
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon move learn method `form change` (`id` = `9`) and stores it into a dictionary with the following keys:  
+The following Python code retrieves JSON data for the Pokémon move learn method *form change* (`id` = `9`) and stores it into a dictionary with the following keys:  
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -668,11 +670,11 @@ An ability to lock on to a Pokémon, environments, or other targetable attribut
 
 `https://pokeapi.co/api/v2/move-target/{id or name}/`
 
-id is the integer (`1` as the lowest option and `16` as the highest option) of which we’ll use the id number for an example Pokémon.
+id is the integer (`1` as the lowest option and `16` as the highest option) of which we’ll use the id number for an example Pokémon
 
 #### Examples
 
-The following Python code retrieves JSON data for the Pokémon move target `fainting Pokémon`  (`id` = `16`) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the Pokémon move target *fainting Pokémon*  (`id` = `16`) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -1162,7 +1164,7 @@ where `id` is an integer (`1` as the lowest option) and `name` is a lower-case s
 
 #### Examples
 
-The following Python code retrieves JSON data for the location areas of the Pokémon Rhydon (this Pokémon's id is 1) and stores it into a dictionary with the following keys:
+The following Python code retrieves JSON data for the location areas of the Pokémon *Rhydon* (this Pokémon's id is 1) and stores it into a dictionary with the following keys:
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
@@ -1204,6 +1206,7 @@ Pokémon can be sorted by *colors* in a Pokédex. Pokémon are sorted into a col
 returns all Pokémon colors. To return results from a specific color use:
 
 `https://pokeapi.co/api/v2/pokemon-color/{id or name}/`  
+
 where `id` is an integer representing the color's id (`1` as the lowest option and `10` as the highest option) and `name` is a lower-case string (the color's name) where spaces are replaced with `-`
 
 #### Examples
@@ -1254,11 +1257,11 @@ Pokémon may appear in different *forms*. The forms are visual and cosmetic. Pok
 #### API path
 `https://pokeapi.co/api/v2/pokemon-form/{id or name}/`
 
-where `id` is an integer representing the  Pokémon's id (`1` as the lowest option and `1450` as the highest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
+where `id` is an integer representing the Pokémon's id (`1` as the lowest option and `1450` as the highest option) and `name` is a lower-case string (the Pokémon's name) where spaces are replaced with `-`
 
 #### Examples
 
-The following Python code retrieves JSON data for the West form of  the Pokémon 'Shellos' (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys: 
+The following Python code retrieves JSON data for the West form of the Pokémon *Shellos* (the id for the West form of Shellos is 422) and stores it into a dictionary with the following keys: 
 
 | <span style="display: inline-block; width:100px;">Name</span>  | <span style="display: inline-block; width:410px;">Description</span> | <span style="display: inline-block; width:100px;">Type</span> |
 | ----- | -------------------- | ---- |
