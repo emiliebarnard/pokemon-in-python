@@ -6,7 +6,7 @@ title: API Docs
 
 # About this documentation
 
-This documentation was created as a team project for the Professional Technical Writing course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.  
+This documentation was created as a team project for the Professional Technical Writing certificate course at the University of Washington. The project contributors and authors were Chani Enochs, Christa Mitchell, Emilie Barnard, Jared Prewitt, Shayla Cabalan, and Yvonne Ben.  
 
 <br>
 
@@ -46,6 +46,7 @@ You can define a <i>dictionary</i> by enclosing a comma-separated list of key-va
 <br>
 
 For example:
+
 ```python
 d = {
     <key>: <value>,
@@ -82,6 +83,7 @@ The purpose of this section is to provide details on how to download and install
 * Python documentation for [Microsoft Windows](https://docs.python.org/3/using/windows.html), [macOS](https://docs.python.org/3/using/mac.html), and [Linux](https://docs.python.org/3/using/unix.html)
 
 <br>
+
 **Note:** Click on the video thumbnail image "Getting Started Poké-Py API Documentation" to be directed to the YouTube site to watch the video on the Getting Started section.
 
 <br>
@@ -1711,6 +1713,8 @@ def show_image(pokemon):
 
 show_image("Skitty")
 ```
+
+---
 
 # Resources
 
